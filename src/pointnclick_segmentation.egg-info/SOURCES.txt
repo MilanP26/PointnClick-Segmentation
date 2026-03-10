@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/pointnclick_segmentation/__init__.py
+src/pointnclick_segmentation/cli.py
+src/pointnclick_segmentation/config.py
+src/pointnclick_segmentation/feedback.py
+src/pointnclick_segmentation/infer.py
+src/pointnclick_segmentation/train.py
+src/pointnclick_segmentation/utils.py
+src/pointnclick_segmentation.egg-info/PKG-INFO
+src/pointnclick_segmentation.egg-info/SOURCES.txt
+src/pointnclick_segmentation.egg-info/dependency_links.txt
+src/pointnclick_segmentation.egg-info/top_level.txt
+src/pointnclick_segmentation/data/__init__.py
+src/pointnclick_segmentation/data/dataset.py
+src/pointnclick_segmentation/model/__init__.py
+src/pointnclick_segmentation/model/unet_click.py
