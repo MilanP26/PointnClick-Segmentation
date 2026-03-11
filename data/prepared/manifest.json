@@ -1,0 +1,5258 @@
+[
+  {
+    "sample_id": "bouton_00_s002",
+    "bouton": 0,
+    "slice": 2,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s02.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s02.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s003",
+    "bouton": 0,
+    "slice": 3,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s03.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s03.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s004",
+    "bouton": 0,
+    "slice": 4,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s04.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s04.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s005",
+    "bouton": 0,
+    "slice": 5,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s05.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s05.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s006",
+    "bouton": 0,
+    "slice": 6,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s06.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s06.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s007",
+    "bouton": 0,
+    "slice": 7,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s07.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s07.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s008",
+    "bouton": 0,
+    "slice": 8,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s08.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s009",
+    "bouton": 0,
+    "slice": 9,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s09.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s010",
+    "bouton": 0,
+    "slice": 10,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s10.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s011",
+    "bouton": 0,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s012",
+    "bouton": 0,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s013",
+    "bouton": 0,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s014",
+    "bouton": 0,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s015",
+    "bouton": 0,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s016",
+    "bouton": 0,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s017",
+    "bouton": 0,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s018",
+    "bouton": 0,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_00_s019",
+    "bouton": 0,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 0\\Bouton 0 EM export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 0\\Bouton 0 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s005",
+    "bouton": 1,
+    "slice": 5,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s05.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s05.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s006",
+    "bouton": 1,
+    "slice": 6,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s06.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s06.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s007",
+    "bouton": 1,
+    "slice": 7,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s07.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s07.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s008",
+    "bouton": 1,
+    "slice": 8,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s08.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s009",
+    "bouton": 1,
+    "slice": 9,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s09.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s010",
+    "bouton": 1,
+    "slice": 10,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s10.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s011",
+    "bouton": 1,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s012",
+    "bouton": 1,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s013",
+    "bouton": 1,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s014",
+    "bouton": 1,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s015",
+    "bouton": 1,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s016",
+    "bouton": 1,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s017",
+    "bouton": 1,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s018",
+    "bouton": 1,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s019",
+    "bouton": 1,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s020",
+    "bouton": 1,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s021",
+    "bouton": 1,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s022",
+    "bouton": 1,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s023",
+    "bouton": 1,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s024",
+    "bouton": 1,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s025",
+    "bouton": 1,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s026",
+    "bouton": 1,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s027",
+    "bouton": 1,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s028",
+    "bouton": 1,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s029",
+    "bouton": 1,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s030",
+    "bouton": 1,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s031",
+    "bouton": 1,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s032",
+    "bouton": 1,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s033",
+    "bouton": 1,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s034",
+    "bouton": 1,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s035",
+    "bouton": 1,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s036",
+    "bouton": 1,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s037",
+    "bouton": 1,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s038",
+    "bouton": 1,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s039",
+    "bouton": 1,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s040",
+    "bouton": 1,
+    "slice": 40,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s041",
+    "bouton": 1,
+    "slice": 41,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s042",
+    "bouton": 1,
+    "slice": 42,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s043",
+    "bouton": 1,
+    "slice": 43,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_01_s044",
+    "bouton": 1,
+    "slice": 44,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 1\\Bouton 1 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 1\\Bouton 1 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s007",
+    "bouton": 2,
+    "slice": 7,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s07.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s07.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s008",
+    "bouton": 2,
+    "slice": 8,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s08.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s009",
+    "bouton": 2,
+    "slice": 9,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s09.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s010",
+    "bouton": 2,
+    "slice": 10,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s10.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s011",
+    "bouton": 2,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s012",
+    "bouton": 2,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s013",
+    "bouton": 2,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s014",
+    "bouton": 2,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s015",
+    "bouton": 2,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s016",
+    "bouton": 2,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s017",
+    "bouton": 2,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s018",
+    "bouton": 2,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s019",
+    "bouton": 2,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s020",
+    "bouton": 2,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s021",
+    "bouton": 2,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s022",
+    "bouton": 2,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s023",
+    "bouton": 2,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s024",
+    "bouton": 2,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s025",
+    "bouton": 2,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s026",
+    "bouton": 2,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s027",
+    "bouton": 2,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s028",
+    "bouton": 2,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_02_s029",
+    "bouton": 2,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 2\\Bouton 2 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 2\\Bouton 2 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s007",
+    "bouton": 3,
+    "slice": 7,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s07.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s07.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s008",
+    "bouton": 3,
+    "slice": 8,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s08.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s009",
+    "bouton": 3,
+    "slice": 9,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s09.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s010",
+    "bouton": 3,
+    "slice": 10,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s10.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s011",
+    "bouton": 3,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s012",
+    "bouton": 3,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s013",
+    "bouton": 3,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s014",
+    "bouton": 3,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s015",
+    "bouton": 3,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s016",
+    "bouton": 3,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s017",
+    "bouton": 3,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s018",
+    "bouton": 3,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s019",
+    "bouton": 3,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s020",
+    "bouton": 3,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s021",
+    "bouton": 3,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s022",
+    "bouton": 3,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s023",
+    "bouton": 3,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s024",
+    "bouton": 3,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s025",
+    "bouton": 3,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s026",
+    "bouton": 3,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s027",
+    "bouton": 3,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s028",
+    "bouton": 3,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s029",
+    "bouton": 3,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_03_s030",
+    "bouton": 3,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 3\\Bouton 3 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 3\\Bouton 3 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s006",
+    "bouton": 4,
+    "slice": 6,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s06.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s06.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s007",
+    "bouton": 4,
+    "slice": 7,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s07.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s07.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s008",
+    "bouton": 4,
+    "slice": 8,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s08.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s009",
+    "bouton": 4,
+    "slice": 9,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s09.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s010",
+    "bouton": 4,
+    "slice": 10,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s10.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s011",
+    "bouton": 4,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s012",
+    "bouton": 4,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s013",
+    "bouton": 4,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s014",
+    "bouton": 4,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s015",
+    "bouton": 4,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s016",
+    "bouton": 4,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s017",
+    "bouton": 4,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s018",
+    "bouton": 4,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s019",
+    "bouton": 4,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s020",
+    "bouton": 4,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s021",
+    "bouton": 4,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s022",
+    "bouton": 4,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s023",
+    "bouton": 4,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s024",
+    "bouton": 4,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s025",
+    "bouton": 4,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s026",
+    "bouton": 4,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s027",
+    "bouton": 4,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s028",
+    "bouton": 4,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s029",
+    "bouton": 4,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s030",
+    "bouton": 4,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s031",
+    "bouton": 4,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s032",
+    "bouton": 4,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s033",
+    "bouton": 4,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s034",
+    "bouton": 4,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s035",
+    "bouton": 4,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s036",
+    "bouton": 4,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s037",
+    "bouton": 4,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s038",
+    "bouton": 4,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s039",
+    "bouton": 4,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_04_s040",
+    "bouton": 4,
+    "slice": 40,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 4\\Bouton 4 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 4\\Bouton 4 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_05_s004",
+    "bouton": 5,
+    "slice": 4,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s04.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s04.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s005",
+    "bouton": 5,
+    "slice": 5,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s05.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s05.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s006",
+    "bouton": 5,
+    "slice": 6,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s06.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s06.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s007",
+    "bouton": 5,
+    "slice": 7,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s07.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s07.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s008",
+    "bouton": 5,
+    "slice": 8,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s08.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s009",
+    "bouton": 5,
+    "slice": 9,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s09.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s010",
+    "bouton": 5,
+    "slice": 10,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s10.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s011",
+    "bouton": 5,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s11.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s012",
+    "bouton": 5,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s12.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s013",
+    "bouton": 5,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s13.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s014",
+    "bouton": 5,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s14.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s015",
+    "bouton": 5,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s15.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s016",
+    "bouton": 5,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s16.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s017",
+    "bouton": 5,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s17.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s018",
+    "bouton": 5,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s18.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s019",
+    "bouton": 5,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s19.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s020",
+    "bouton": 5,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s20.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s021",
+    "bouton": 5,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s21.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s022",
+    "bouton": 5,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s22.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s023",
+    "bouton": 5,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s23.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s024",
+    "bouton": 5,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s24.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s025",
+    "bouton": 5,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s25.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s026",
+    "bouton": 5,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s26.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s027",
+    "bouton": 5,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s27.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s028",
+    "bouton": 5,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s28.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s029",
+    "bouton": 5,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s29.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s030",
+    "bouton": 5,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s30.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s031",
+    "bouton": 5,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s31.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s032",
+    "bouton": 5,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s32.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s033",
+    "bouton": 5,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s33.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s034",
+    "bouton": 5,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s34.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s035",
+    "bouton": 5,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s35.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s036",
+    "bouton": 5,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s36.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s037",
+    "bouton": 5,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s37.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s038",
+    "bouton": 5,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s38.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_05_s039",
+    "bouton": 5,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 5\\Bouton 5 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 5\\Bouton 5 Segmentation_s39.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_06_s008",
+    "bouton": 6,
+    "slice": 8,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s08.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s009",
+    "bouton": 6,
+    "slice": 9,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s09.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s010",
+    "bouton": 6,
+    "slice": 10,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s10.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s011",
+    "bouton": 6,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s012",
+    "bouton": 6,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s013",
+    "bouton": 6,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s014",
+    "bouton": 6,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s015",
+    "bouton": 6,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s016",
+    "bouton": 6,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s017",
+    "bouton": 6,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s018",
+    "bouton": 6,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s019",
+    "bouton": 6,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s020",
+    "bouton": 6,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s021",
+    "bouton": 6,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s022",
+    "bouton": 6,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s023",
+    "bouton": 6,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s024",
+    "bouton": 6,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s025",
+    "bouton": 6,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s026",
+    "bouton": 6,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s027",
+    "bouton": 6,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s028",
+    "bouton": 6,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_06_s029",
+    "bouton": 6,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 6\\Bouton 6 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 6\\Bouton 6 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s007",
+    "bouton": 7,
+    "slice": 7,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s07.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s07.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s008",
+    "bouton": 7,
+    "slice": 8,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s08.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s009",
+    "bouton": 7,
+    "slice": 9,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s09.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s010",
+    "bouton": 7,
+    "slice": 10,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s10.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s011",
+    "bouton": 7,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s012",
+    "bouton": 7,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s013",
+    "bouton": 7,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s014",
+    "bouton": 7,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s015",
+    "bouton": 7,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s016",
+    "bouton": 7,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s017",
+    "bouton": 7,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s018",
+    "bouton": 7,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s019",
+    "bouton": 7,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s020",
+    "bouton": 7,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s021",
+    "bouton": 7,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s022",
+    "bouton": 7,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s023",
+    "bouton": 7,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s024",
+    "bouton": 7,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s025",
+    "bouton": 7,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s026",
+    "bouton": 7,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s027",
+    "bouton": 7,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s028",
+    "bouton": 7,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s029",
+    "bouton": 7,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s030",
+    "bouton": 7,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s031",
+    "bouton": 7,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s032",
+    "bouton": 7,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s033",
+    "bouton": 7,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_07_s034",
+    "bouton": 7,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 7\\Bouton 7 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 7\\Bouton 7 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s011",
+    "bouton": 8,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s012",
+    "bouton": 8,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s013",
+    "bouton": 8,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s014",
+    "bouton": 8,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s015",
+    "bouton": 8,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s016",
+    "bouton": 8,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s017",
+    "bouton": 8,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s018",
+    "bouton": 8,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s019",
+    "bouton": 8,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s020",
+    "bouton": 8,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s021",
+    "bouton": 8,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s022",
+    "bouton": 8,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s023",
+    "bouton": 8,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s024",
+    "bouton": 8,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s025",
+    "bouton": 8,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s026",
+    "bouton": 8,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s027",
+    "bouton": 8,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s028",
+    "bouton": 8,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s029",
+    "bouton": 8,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s030",
+    "bouton": 8,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s031",
+    "bouton": 8,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s032",
+    "bouton": 8,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s033",
+    "bouton": 8,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s034",
+    "bouton": 8,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s035",
+    "bouton": 8,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s036",
+    "bouton": 8,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s037",
+    "bouton": 8,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s038",
+    "bouton": 8,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s039",
+    "bouton": 8,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s040",
+    "bouton": 8,
+    "slice": 40,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s041",
+    "bouton": 8,
+    "slice": 41,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s042",
+    "bouton": 8,
+    "slice": 42,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s043",
+    "bouton": 8,
+    "slice": 43,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s044",
+    "bouton": 8,
+    "slice": 44,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s045",
+    "bouton": 8,
+    "slice": 45,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s45.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s45.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_08_s046",
+    "bouton": 8,
+    "slice": 46,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 8\\Bouton 8 Export_s46.png",
+    "mask_src": "exports\\Boutons\\Bouton 8\\Bouton 8 Segmentation_s46.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s011",
+    "bouton": 9,
+    "slice": 11,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s012",
+    "bouton": 9,
+    "slice": 12,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s013",
+    "bouton": 9,
+    "slice": 13,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s014",
+    "bouton": 9,
+    "slice": 14,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s015",
+    "bouton": 9,
+    "slice": 15,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s016",
+    "bouton": 9,
+    "slice": 16,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s017",
+    "bouton": 9,
+    "slice": 17,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s018",
+    "bouton": 9,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s019",
+    "bouton": 9,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s020",
+    "bouton": 9,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s021",
+    "bouton": 9,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s022",
+    "bouton": 9,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s023",
+    "bouton": 9,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s024",
+    "bouton": 9,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s025",
+    "bouton": 9,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s026",
+    "bouton": 9,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s027",
+    "bouton": 9,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s028",
+    "bouton": 9,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s029",
+    "bouton": 9,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s030",
+    "bouton": 9,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s031",
+    "bouton": 9,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s032",
+    "bouton": 9,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s033",
+    "bouton": 9,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s034",
+    "bouton": 9,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s035",
+    "bouton": 9,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s036",
+    "bouton": 9,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s037",
+    "bouton": 9,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s038",
+    "bouton": 9,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_09_s039",
+    "bouton": 9,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 9\\Bouton 9 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 9\\Bouton 9 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s018",
+    "bouton": 10,
+    "slice": 18,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s019",
+    "bouton": 10,
+    "slice": 19,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s020",
+    "bouton": 10,
+    "slice": 20,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s021",
+    "bouton": 10,
+    "slice": 21,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s022",
+    "bouton": 10,
+    "slice": 22,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s023",
+    "bouton": 10,
+    "slice": 23,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s024",
+    "bouton": 10,
+    "slice": 24,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s025",
+    "bouton": 10,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s026",
+    "bouton": 10,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s027",
+    "bouton": 10,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s028",
+    "bouton": 10,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s029",
+    "bouton": 10,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s030",
+    "bouton": 10,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s031",
+    "bouton": 10,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s032",
+    "bouton": 10,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s033",
+    "bouton": 10,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s034",
+    "bouton": 10,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s035",
+    "bouton": 10,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s036",
+    "bouton": 10,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s037",
+    "bouton": 10,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s038",
+    "bouton": 10,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s039",
+    "bouton": 10,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s040",
+    "bouton": 10,
+    "slice": 40,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s041",
+    "bouton": 10,
+    "slice": 41,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s042",
+    "bouton": 10,
+    "slice": 42,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s043",
+    "bouton": 10,
+    "slice": 43,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s044",
+    "bouton": 10,
+    "slice": 44,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s045",
+    "bouton": 10,
+    "slice": 45,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s45.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s45.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s046",
+    "bouton": 10,
+    "slice": 46,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s46.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s46.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_10_s047",
+    "bouton": 10,
+    "slice": 47,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 10\\Bouton 10 Export_s47.png",
+    "mask_src": "exports\\Boutons\\Bouton 10\\Bouton 10 Segmentation_s47.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s025",
+    "bouton": 11,
+    "slice": 25,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s026",
+    "bouton": 11,
+    "slice": 26,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s027",
+    "bouton": 11,
+    "slice": 27,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s028",
+    "bouton": 11,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s029",
+    "bouton": 11,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s030",
+    "bouton": 11,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s031",
+    "bouton": 11,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s032",
+    "bouton": 11,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s033",
+    "bouton": 11,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s034",
+    "bouton": 11,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s035",
+    "bouton": 11,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s036",
+    "bouton": 11,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s037",
+    "bouton": 11,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s038",
+    "bouton": 11,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s039",
+    "bouton": 11,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s040",
+    "bouton": 11,
+    "slice": 40,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s041",
+    "bouton": 11,
+    "slice": 41,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s042",
+    "bouton": 11,
+    "slice": 42,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s043",
+    "bouton": 11,
+    "slice": 43,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s044",
+    "bouton": 11,
+    "slice": 44,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s045",
+    "bouton": 11,
+    "slice": 45,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s45.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s45.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s046",
+    "bouton": 11,
+    "slice": 46,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s46.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s46.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s047",
+    "bouton": 11,
+    "slice": 47,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s47.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s47.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s048",
+    "bouton": 11,
+    "slice": 48,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s48.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s48.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s049",
+    "bouton": 11,
+    "slice": 49,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s49.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s49.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s050",
+    "bouton": 11,
+    "slice": 50,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s50.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s50.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s051",
+    "bouton": 11,
+    "slice": 51,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s51.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s51.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_11_s052",
+    "bouton": 11,
+    "slice": 52,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 11\\Bouton 11 Export_s52.png",
+    "mask_src": "exports\\Boutons\\Bouton 11\\Bouton 11 Segmentation_s52.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s028",
+    "bouton": 12,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s029",
+    "bouton": 12,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s030",
+    "bouton": 12,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s031",
+    "bouton": 12,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s032",
+    "bouton": 12,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s033",
+    "bouton": 12,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s034",
+    "bouton": 12,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s035",
+    "bouton": 12,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s036",
+    "bouton": 12,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s037",
+    "bouton": 12,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s038",
+    "bouton": 12,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s039",
+    "bouton": 12,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s040",
+    "bouton": 12,
+    "slice": 40,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s041",
+    "bouton": 12,
+    "slice": 41,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s042",
+    "bouton": 12,
+    "slice": 42,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s043",
+    "bouton": 12,
+    "slice": 43,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s044",
+    "bouton": 12,
+    "slice": 44,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s045",
+    "bouton": 12,
+    "slice": 45,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s45.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s45.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s046",
+    "bouton": 12,
+    "slice": 46,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s46.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s46.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s047",
+    "bouton": 12,
+    "slice": 47,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s47.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s47.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s048",
+    "bouton": 12,
+    "slice": 48,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s48.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s48.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s049",
+    "bouton": 12,
+    "slice": 49,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s49.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s49.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s050",
+    "bouton": 12,
+    "slice": 50,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s50.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s50.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s051",
+    "bouton": 12,
+    "slice": 51,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s51.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s51.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s052",
+    "bouton": 12,
+    "slice": 52,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s52.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s52.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s053",
+    "bouton": 12,
+    "slice": 53,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s53.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s53.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_12_s054",
+    "bouton": 12,
+    "slice": 54,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 12\\Bouton 12 Export_s54.png",
+    "mask_src": "exports\\Boutons\\Bouton 12\\Bouton 12 Segmentation_s54.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s028",
+    "bouton": 13,
+    "slice": 28,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s029",
+    "bouton": 13,
+    "slice": 29,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s030",
+    "bouton": 13,
+    "slice": 30,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s031",
+    "bouton": 13,
+    "slice": 31,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s032",
+    "bouton": 13,
+    "slice": 32,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s033",
+    "bouton": 13,
+    "slice": 33,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s034",
+    "bouton": 13,
+    "slice": 34,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s035",
+    "bouton": 13,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s036",
+    "bouton": 13,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s037",
+    "bouton": 13,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s038",
+    "bouton": 13,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s039",
+    "bouton": 13,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s040",
+    "bouton": 13,
+    "slice": 40,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s041",
+    "bouton": 13,
+    "slice": 41,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s042",
+    "bouton": 13,
+    "slice": 42,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s043",
+    "bouton": 13,
+    "slice": 43,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_13_s044",
+    "bouton": 13,
+    "slice": 44,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 13\\Bouton 13 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 13\\Bouton 13 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s037",
+    "bouton": 14,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s038",
+    "bouton": 14,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s039",
+    "bouton": 14,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s040",
+    "bouton": 14,
+    "slice": 40,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s041",
+    "bouton": 14,
+    "slice": 41,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s042",
+    "bouton": 14,
+    "slice": 42,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s043",
+    "bouton": 14,
+    "slice": 43,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s044",
+    "bouton": 14,
+    "slice": 44,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s045",
+    "bouton": 14,
+    "slice": 45,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s45.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s45.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s046",
+    "bouton": 14,
+    "slice": 46,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s46.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s46.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s047",
+    "bouton": 14,
+    "slice": 47,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s47.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s47.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s048",
+    "bouton": 14,
+    "slice": 48,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s48.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s48.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s049",
+    "bouton": 14,
+    "slice": 49,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s49.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s49.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s050",
+    "bouton": 14,
+    "slice": 50,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s50.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s50.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s051",
+    "bouton": 14,
+    "slice": 51,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s51.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s51.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s052",
+    "bouton": 14,
+    "slice": 52,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s52.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s52.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s053",
+    "bouton": 14,
+    "slice": 53,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s53.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s53.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s054",
+    "bouton": 14,
+    "slice": 54,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s54.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s54.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s055",
+    "bouton": 14,
+    "slice": 55,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s55.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s55.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s056",
+    "bouton": 14,
+    "slice": 56,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s56.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s56.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s057",
+    "bouton": 14,
+    "slice": 57,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s57.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s57.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s058",
+    "bouton": 14,
+    "slice": 58,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s58.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s58.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_14_s059",
+    "bouton": 14,
+    "slice": 59,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 14\\Bouton 14 Export_s59.png",
+    "mask_src": "exports\\Boutons\\Bouton 14\\Bouton 14 Segmentation_s59.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s035",
+    "bouton": 15,
+    "slice": 35,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s036",
+    "bouton": 15,
+    "slice": 36,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s037",
+    "bouton": 15,
+    "slice": 37,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s038",
+    "bouton": 15,
+    "slice": 38,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s039",
+    "bouton": 15,
+    "slice": 39,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s040",
+    "bouton": 15,
+    "slice": 40,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s041",
+    "bouton": 15,
+    "slice": 41,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s042",
+    "bouton": 15,
+    "slice": 42,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s043",
+    "bouton": 15,
+    "slice": 43,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s044",
+    "bouton": 15,
+    "slice": 44,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s045",
+    "bouton": 15,
+    "slice": 45,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s45.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s45.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s046",
+    "bouton": 15,
+    "slice": 46,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s46.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s46.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s047",
+    "bouton": 15,
+    "slice": 47,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s47.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s47.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s048",
+    "bouton": 15,
+    "slice": 48,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s48.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s48.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s049",
+    "bouton": 15,
+    "slice": 49,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s49.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s49.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s050",
+    "bouton": 15,
+    "slice": 50,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s50.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s50.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s051",
+    "bouton": 15,
+    "slice": 51,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s51.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s51.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s052",
+    "bouton": 15,
+    "slice": 52,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s52.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s52.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s053",
+    "bouton": 15,
+    "slice": 53,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s53.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s53.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s054",
+    "bouton": 15,
+    "slice": 54,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s54.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s54.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s055",
+    "bouton": 15,
+    "slice": 55,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s55.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s55.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s056",
+    "bouton": 15,
+    "slice": 56,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s56.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s56.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s057",
+    "bouton": 15,
+    "slice": 57,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s57.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s57.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_15_s058",
+    "bouton": 15,
+    "slice": 58,
+    "split": "train",
+    "image_src": "exports\\EM\\Bouton 15\\Bouton 15 Export_s58.png",
+    "mask_src": "exports\\Boutons\\Bouton 15\\Bouton 14 Segmentation_s58.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s022",
+    "bouton": 16,
+    "slice": 22,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s023",
+    "bouton": 16,
+    "slice": 23,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s024",
+    "bouton": 16,
+    "slice": 24,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s025",
+    "bouton": 16,
+    "slice": 25,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s026",
+    "bouton": 16,
+    "slice": 26,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s027",
+    "bouton": 16,
+    "slice": 27,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s028",
+    "bouton": 16,
+    "slice": 28,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s029",
+    "bouton": 16,
+    "slice": 29,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s030",
+    "bouton": 16,
+    "slice": 30,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s031",
+    "bouton": 16,
+    "slice": 31,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s032",
+    "bouton": 16,
+    "slice": 32,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s033",
+    "bouton": 16,
+    "slice": 33,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s034",
+    "bouton": 16,
+    "slice": 34,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s035",
+    "bouton": 16,
+    "slice": 35,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s036",
+    "bouton": 16,
+    "slice": 36,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s037",
+    "bouton": 16,
+    "slice": 37,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s038",
+    "bouton": 16,
+    "slice": 38,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s039",
+    "bouton": 16,
+    "slice": 39,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s040",
+    "bouton": 16,
+    "slice": 40,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s041",
+    "bouton": 16,
+    "slice": 41,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s042",
+    "bouton": 16,
+    "slice": 42,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_16_s043",
+    "bouton": 16,
+    "slice": 43,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 16\\Bouton 16 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 16\\Bouton 16 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s020",
+    "bouton": 17,
+    "slice": 20,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s021",
+    "bouton": 17,
+    "slice": 21,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s022",
+    "bouton": 17,
+    "slice": 22,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s22.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s023",
+    "bouton": 17,
+    "slice": 23,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s23.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s024",
+    "bouton": 17,
+    "slice": 24,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s24.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s025",
+    "bouton": 17,
+    "slice": 25,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s25.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s026",
+    "bouton": 17,
+    "slice": 26,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s26.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s027",
+    "bouton": 17,
+    "slice": 27,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s27.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s028",
+    "bouton": 17,
+    "slice": 28,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s28.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s029",
+    "bouton": 17,
+    "slice": 29,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s29.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s030",
+    "bouton": 17,
+    "slice": 30,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s30.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s031",
+    "bouton": 17,
+    "slice": 31,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s31.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s032",
+    "bouton": 17,
+    "slice": 32,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s32.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s033",
+    "bouton": 17,
+    "slice": 33,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s33.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s034",
+    "bouton": 17,
+    "slice": 34,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s34.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s035",
+    "bouton": 17,
+    "slice": 35,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s35.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s036",
+    "bouton": 17,
+    "slice": 36,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s36.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s037",
+    "bouton": 17,
+    "slice": 37,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s37.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s038",
+    "bouton": 17,
+    "slice": 38,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s38.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s039",
+    "bouton": 17,
+    "slice": 39,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s39.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s040",
+    "bouton": 17,
+    "slice": 40,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s40.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s041",
+    "bouton": 17,
+    "slice": 41,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s41.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s042",
+    "bouton": 17,
+    "slice": 42,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s42.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s043",
+    "bouton": 17,
+    "slice": 43,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Vesicles in Bouton 16_s43.png",
+    "resized_mask_to_match_em": true
+  },
+  {
+    "sample_id": "bouton_17_s044",
+    "bouton": 17,
+    "slice": 44,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s045",
+    "bouton": 17,
+    "slice": 45,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s45.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s45.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s046",
+    "bouton": 17,
+    "slice": 46,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s46.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s46.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s047",
+    "bouton": 17,
+    "slice": 47,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s47.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s47.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s048",
+    "bouton": 17,
+    "slice": 48,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s48.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s48.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s049",
+    "bouton": 17,
+    "slice": 49,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s49.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s49.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s050",
+    "bouton": 17,
+    "slice": 50,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s50.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s50.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s051",
+    "bouton": 17,
+    "slice": 51,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s51.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s51.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s052",
+    "bouton": 17,
+    "slice": 52,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s52.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s52.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s053",
+    "bouton": 17,
+    "slice": 53,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s53.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s53.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_17_s054",
+    "bouton": 17,
+    "slice": 54,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 17\\Bouton 17 Export_s54.png",
+    "mask_src": "exports\\Boutons\\Bouton 17\\Bouton 17 Segmentation_s54.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s004",
+    "bouton": 18,
+    "slice": 4,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s04.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s04.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s005",
+    "bouton": 18,
+    "slice": 5,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s05.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s05.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s006",
+    "bouton": 18,
+    "slice": 6,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s06.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s06.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s007",
+    "bouton": 18,
+    "slice": 7,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s07.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s07.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s008",
+    "bouton": 18,
+    "slice": 8,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s08.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s009",
+    "bouton": 18,
+    "slice": 9,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s09.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s010",
+    "bouton": 18,
+    "slice": 10,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s10.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s011",
+    "bouton": 18,
+    "slice": 11,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s012",
+    "bouton": 18,
+    "slice": 12,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s013",
+    "bouton": 18,
+    "slice": 13,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s014",
+    "bouton": 18,
+    "slice": 14,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s015",
+    "bouton": 18,
+    "slice": 15,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s016",
+    "bouton": 18,
+    "slice": 16,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s017",
+    "bouton": 18,
+    "slice": 17,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s018",
+    "bouton": 18,
+    "slice": 18,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s019",
+    "bouton": 18,
+    "slice": 19,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s020",
+    "bouton": 18,
+    "slice": 20,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s021",
+    "bouton": 18,
+    "slice": 21,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s022",
+    "bouton": 18,
+    "slice": 22,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s023",
+    "bouton": 18,
+    "slice": 23,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s024",
+    "bouton": 18,
+    "slice": 24,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s025",
+    "bouton": 18,
+    "slice": 25,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s026",
+    "bouton": 18,
+    "slice": 26,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s027",
+    "bouton": 18,
+    "slice": 27,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s028",
+    "bouton": 18,
+    "slice": 28,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s029",
+    "bouton": 18,
+    "slice": 29,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s030",
+    "bouton": 18,
+    "slice": 30,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s031",
+    "bouton": 18,
+    "slice": 31,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s032",
+    "bouton": 18,
+    "slice": 32,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s033",
+    "bouton": 18,
+    "slice": 33,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s034",
+    "bouton": 18,
+    "slice": 34,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_18_s035",
+    "bouton": 18,
+    "slice": 35,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 18\\Bouton 18 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 18\\Bouton 18 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s002",
+    "bouton": 19,
+    "slice": 2,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s02.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s02.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s003",
+    "bouton": 19,
+    "slice": 3,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s03.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s03.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s004",
+    "bouton": 19,
+    "slice": 4,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s04.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s04.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s005",
+    "bouton": 19,
+    "slice": 5,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s05.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s05.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s006",
+    "bouton": 19,
+    "slice": 6,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s06.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s06.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s007",
+    "bouton": 19,
+    "slice": 7,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s07.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s07.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s008",
+    "bouton": 19,
+    "slice": 8,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s08.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s08.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s009",
+    "bouton": 19,
+    "slice": 9,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s09.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s09.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s010",
+    "bouton": 19,
+    "slice": 10,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s10.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s10.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s011",
+    "bouton": 19,
+    "slice": 11,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s11.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s11.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s012",
+    "bouton": 19,
+    "slice": 12,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s12.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s12.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s013",
+    "bouton": 19,
+    "slice": 13,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s13.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s13.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s014",
+    "bouton": 19,
+    "slice": 14,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s14.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s14.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s015",
+    "bouton": 19,
+    "slice": 15,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s15.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s15.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s016",
+    "bouton": 19,
+    "slice": 16,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s16.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s16.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s017",
+    "bouton": 19,
+    "slice": 17,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s17.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s17.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s018",
+    "bouton": 19,
+    "slice": 18,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s18.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s18.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s019",
+    "bouton": 19,
+    "slice": 19,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s19.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s19.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s020",
+    "bouton": 19,
+    "slice": 20,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s20.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s20.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s021",
+    "bouton": 19,
+    "slice": 21,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s21.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s21.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s022",
+    "bouton": 19,
+    "slice": 22,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s22.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s22.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s023",
+    "bouton": 19,
+    "slice": 23,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s23.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s23.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s024",
+    "bouton": 19,
+    "slice": 24,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s24.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s24.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s025",
+    "bouton": 19,
+    "slice": 25,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s25.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s25.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s026",
+    "bouton": 19,
+    "slice": 26,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s26.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s26.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s027",
+    "bouton": 19,
+    "slice": 27,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s27.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s27.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s028",
+    "bouton": 19,
+    "slice": 28,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s28.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s28.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s029",
+    "bouton": 19,
+    "slice": 29,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s29.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s29.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s030",
+    "bouton": 19,
+    "slice": 30,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s30.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s30.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s031",
+    "bouton": 19,
+    "slice": 31,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s31.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s31.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s032",
+    "bouton": 19,
+    "slice": 32,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s32.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s32.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s033",
+    "bouton": 19,
+    "slice": 33,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s33.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s33.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s034",
+    "bouton": 19,
+    "slice": 34,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s34.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s34.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s035",
+    "bouton": 19,
+    "slice": 35,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s35.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s35.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s036",
+    "bouton": 19,
+    "slice": 36,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s36.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s36.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s037",
+    "bouton": 19,
+    "slice": 37,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s37.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s37.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s038",
+    "bouton": 19,
+    "slice": 38,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s38.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s38.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s039",
+    "bouton": 19,
+    "slice": 39,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s39.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s39.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s040",
+    "bouton": 19,
+    "slice": 40,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s40.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s40.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s041",
+    "bouton": 19,
+    "slice": 41,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s41.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s41.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s042",
+    "bouton": 19,
+    "slice": 42,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s42.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s42.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s043",
+    "bouton": 19,
+    "slice": 43,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s43.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s43.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s044",
+    "bouton": 19,
+    "slice": 44,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s44.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s44.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s045",
+    "bouton": 19,
+    "slice": 45,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s45.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s45.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s046",
+    "bouton": 19,
+    "slice": 46,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s46.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s46.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s047",
+    "bouton": 19,
+    "slice": 47,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s47.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s47.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s048",
+    "bouton": 19,
+    "slice": 48,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s48.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s48.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s049",
+    "bouton": 19,
+    "slice": 49,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s49.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s49.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s050",
+    "bouton": 19,
+    "slice": 50,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s50.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s50.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s051",
+    "bouton": 19,
+    "slice": 51,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s51.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s51.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s052",
+    "bouton": 19,
+    "slice": 52,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s52.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s52.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s053",
+    "bouton": 19,
+    "slice": 53,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s53.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s53.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s054",
+    "bouton": 19,
+    "slice": 54,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s54.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s54.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s055",
+    "bouton": 19,
+    "slice": 55,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s55.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s55.png",
+    "resized_mask_to_match_em": false
+  },
+  {
+    "sample_id": "bouton_19_s056",
+    "bouton": 19,
+    "slice": 56,
+    "split": "val",
+    "image_src": "exports\\EM\\Bouton 19\\Bouton 19 Export_s56.png",
+    "mask_src": "exports\\Boutons\\Bouton 19\\Bouton 19 Segmentation_s56.png",
+    "resized_mask_to_match_em": false
+  }
+]

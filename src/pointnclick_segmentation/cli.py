@@ -3,9 +3,7 @@ from __future__ import annotations
 import argparse
 
 from pointnclick_segmentation.config import TrainConfig
-from pointnclick_segmentation.feedback import add_feedback_sample
-from pointnclick_segmentation.infer import predict_mask
-from pointnclick_segmentation.train import train_model
+from pointnclick_segmentation.prepare_exports import prepare_exports_dataset
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -36,6 +34,12 @@ def build_parser() -> argparse.ArgumentParser:
     feedback_parser.add_argument("--feedback-dir", required=True)
     feedback_parser.add_argument("--sample-id", required=True)
 
+    prepare_parser = subparsers.add_parser("prepare-exports", help="Build train/val data from exports\\EM and exports\\Boutons")
+    prepare_parser.add_argument("--exports-dir", default="exports")
+    prepare_parser.add_argument("--output-dir", required=True)
+    prepare_parser.add_argument("--val-boutons", help="Comma-separated bouton ids for validation, for example 16,17,18,19")
+    prepare_parser.add_argument("--no-resize-masks", action="store_true", help="Fail if a bouton mask size does not match the EM export")
+
     return parser
 
 
@@ -59,6 +63,8 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.command in {"train", "finetune"}:
+        from pointnclick_segmentation.train import train_model
+
         config = TrainConfig(
             train_dir=args.train_dir,
             val_dir=args.val_dir,
@@ -80,6 +86,8 @@ def main() -> None:
         return
 
     if args.command == "predict":
+        from pointnclick_segmentation.infer import predict_mask
+
         predict_mask(
             checkpoint_path=args.checkpoint,
             image_path=args.image,
@@ -97,6 +105,8 @@ def main() -> None:
         return
 
     if args.command == "add-feedback":
+        from pointnclick_segmentation.feedback import add_feedback_sample
+
         result = add_feedback_sample(
             image_path=args.image,
             mask_path=args.mask,
@@ -105,6 +115,22 @@ def main() -> None:
         )
         print(f"Copied image to: {result['image']}")
         print(f"Copied mask to: {result['mask']}")
+        return
+
+    if args.command == "prepare-exports":
+        val_boutons = None
+        if args.val_boutons:
+            val_boutons = [int(part.strip()) for part in args.val_boutons.split(",") if part.strip()]
+        result = prepare_exports_dataset(
+            exports_dir=args.exports_dir,
+            output_dir=args.output_dir,
+            val_boutons=val_boutons,
+            resize_masks_to_em=not args.no_resize_masks,
+        )
+        print(f"Prepared dataset in: {args.output_dir}")
+        print(f"Training samples: {result['num_train']}")
+        print(f"Validation samples: {result['num_val']}")
+        print(f"Validation boutons: {result['val_boutons']}")
         return
 
     raise ValueError(f"Unsupported command: {args.command}")

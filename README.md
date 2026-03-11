@@ -54,17 +54,45 @@ Rules:
 ```powershell
 py -3 -m venv .venv
 .venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-pip install -e .
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
+
+Use `run_cli.py` from the repo root. You do not need `pip install -e .`.
+
+## Prepare your current exports
+
+You already have:
+
+- `exports\EM\Bouton X\...`
+- `exports\Boutons\Bouton X\...`
+
+Use this to create a training dataset directly from those exports:
+
+```powershell
+.\.venv\Scripts\python.exe .\run_cli.py prepare-exports `
+  --exports-dir exports `
+  --output-dir data\prepared `
+  --val-boutons 16,17,18,19
+```
+
+This will:
+
+- Pair EM slices with bouton segmentation masks by slice number
+- Ignore `exports\Vesicles`
+- Convert masks to binary
+- Build:
+  - `data\prepared\train\images`
+  - `data\prepared\train\masks`
+  - `data\prepared\val\images`
+  - `data\prepared\val\masks`
 
 ## Train
 
 ```powershell
-python -m pointnclick_segmentation.cli train `
-  --train-dir data\train `
-  --val-dir data\val `
+.\.venv\Scripts\python.exe .\run_cli.py train `
+  --train-dir data\prepared\train `
+  --val-dir data\prepared\val `
   --output-dir runs\baseline `
   --epochs 50 `
   --batch-size 8 `
@@ -74,7 +102,7 @@ python -m pointnclick_segmentation.cli train `
 ## Predict from one click
 
 ```powershell
-python -m pointnclick_segmentation.cli predict `
+.\.venv\Scripts\python.exe .\run_cli.py predict `
   --checkpoint runs\baseline\best_model.pt `
   --image path\to\slice_0142.png `
   --x 841 `
@@ -86,7 +114,7 @@ python -m pointnclick_segmentation.cli predict `
 ## Add corrected masks and fine-tune
 
 ```powershell
-python -m pointnclick_segmentation.cli add-feedback `
+.\.venv\Scripts\python.exe .\run_cli.py add-feedback `
   --image path\to\slice_0142.png `
   --mask path\to\corrected_mask.png `
   --feedback-dir data\feedback `
@@ -94,10 +122,10 @@ python -m pointnclick_segmentation.cli add-feedback `
 ```
 
 ```powershell
-python -m pointnclick_segmentation.cli finetune `
+.\.venv\Scripts\python.exe .\run_cli.py finetune `
   --checkpoint runs\baseline\best_model.pt `
-  --train-dir data\train `
-  --val-dir data\val `
+  --train-dir data\prepared\train `
+  --val-dir data\prepared\val `
   --feedback-dir data\feedback `
   --output-dir runs\finetune_001 `
   --epochs 10 `

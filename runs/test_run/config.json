@@ -1,0 +1,15 @@
+{
+  "train_dir": "data\\prepared\\train",
+  "val_dir": "data\\prepared\\val",
+  "output_dir": "runs\\test_run",
+  "feedback_dir": null,
+  "image_size": 128,
+  "batch_size": 2,
+  "epochs": 1,
+  "learning_rate": 0.001,
+  "weight_decay": 1e-05,
+  "num_workers": 0,
+  "seed": 42,
+  "device": "cpu",
+  "resume_checkpoint": null
+}

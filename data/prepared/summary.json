@@ -1,0 +1,11 @@
+{
+  "num_train": 440,
+  "num_val": 144,
+  "val_boutons": [
+    16,
+    17,
+    18,
+    19
+  ],
+  "resize_masks_to_em": true
+}
