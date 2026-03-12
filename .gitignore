@@ -1,0 +1,7 @@
+.venv/
+venv/
+
+.venv/Lib/site-packages/torch/lib/dnn.lib
+.venv/Lib/site-packages/torch/lib/torch_cpu.dll
+venv/Lib/site-packages/torch/lib/dnn.lib
+venv/Lib/site-packages/torch/lib/torch_cpu.dll
