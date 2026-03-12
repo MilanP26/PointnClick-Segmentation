@@ -4,6 +4,9 @@ import json
 from pathlib import Path
 import shutil
 
+import numpy as np
+from PIL import Image
+
 from pointnclick_segmentation.utils import ensure_dir
 
 
@@ -38,6 +41,41 @@ def add_feedback_sample(
             )
             + "\n"
         )
+
+    return {
+        "image": str(image_dst),
+        "mask": str(mask_dst),
+    }
+
+
+def add_feedback_array_sample(
+    image: np.ndarray,
+    mask: np.ndarray,
+    feedback_dir: str | Path,
+    sample_id: str,
+    metadata: dict | None = None,
+) -> dict[str, str]:
+    feedback_dir = Path(feedback_dir)
+    image_dir = ensure_dir(feedback_dir / "images")
+    mask_dir = ensure_dir(feedback_dir / "masks")
+
+    image_dst = image_dir / f"{sample_id}.png"
+    mask_dst = mask_dir / f"{sample_id}.png"
+
+    Image.fromarray(image.astype(np.uint8), mode="L").save(image_dst)
+    Image.fromarray(((mask > 0).astype(np.uint8) * 255), mode="L").save(mask_dst)
+
+    manifest_path = feedback_dir / "manifest.jsonl"
+    record = {
+        "sample_id": sample_id,
+        "image": str(image_dst),
+        "mask": str(mask_dst),
+        "source": "vast_live_feedback",
+    }
+    if metadata:
+        record["metadata"] = metadata
+    with manifest_path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(record) + "\n")
 
     return {
         "image": str(image_dst),

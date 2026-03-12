@@ -62,6 +62,13 @@ def build_parser() -> argparse.ArgumentParser:
     vast_live_parser.add_argument("--device", default="cpu")
     vast_live_parser.add_argument("--output-dir", default="outputs\\vast_live")
     vast_live_parser.add_argument("--allowed-uimode", type=int)
+    vast_live_parser.add_argument("--auto-key", default="P", help="Hold this key while clicking to trigger auto-segmentation")
+    vast_live_parser.add_argument("--feedback-key", default="I", help="Hold this key while clicking corrected masks to capture feedback")
+    vast_live_parser.add_argument("--feedback-dir", default="data\\feedback_vast")
+    vast_live_parser.add_argument("--disable-online-learning", action="store_true")
+    vast_live_parser.add_argument("--online-output-dir", default="runs\\live_feedback")
+    vast_live_parser.add_argument("--online-epochs", type=int, default=1)
+    vast_live_parser.add_argument("--online-learning-rate", type=float, default=1e-4)
 
     feedback_parser = subparsers.add_parser("add-feedback", help="Add a corrected sample for future fine-tuning")
     feedback_parser.add_argument("--image", required=True)
@@ -205,6 +212,13 @@ def main() -> None:
             device_name=args.device,
             output_dir=args.output_dir,
             allowed_uimode=args.allowed_uimode,
+            auto_segment_key=args.auto_key,
+            feedback_capture_key=args.feedback_key,
+            feedback_dir=args.feedback_dir,
+            online_learning=not args.disable_online_learning,
+            online_learning_output_dir=args.online_output_dir,
+            online_learning_epochs=args.online_epochs,
+            online_learning_rate=args.online_learning_rate,
         )
         try:
             run_vast_live_bridge(config)

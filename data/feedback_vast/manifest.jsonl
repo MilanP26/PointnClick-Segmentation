@@ -1,0 +1,1 @@
+{"sample_id": "z26_x12702_y12365_seg1_1773345784620", "image": "data\\feedback_vast\\images\\z26_x12702_y12365_seg1_1773345784620.png", "mask": "data\\feedback_vast\\masks\\z26_x12702_y12365_seg1_1773345784620.png", "source": "vast_live_feedback", "metadata": {"selected_segment": 1, "global_click_xyz": [12702, 12365, 26], "crop_bounds_xyz": [12446, 12957, 12109, 12620, 26, 26]}}
