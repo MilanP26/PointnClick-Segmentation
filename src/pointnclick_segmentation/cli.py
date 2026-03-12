@@ -44,6 +44,25 @@ def build_parser() -> argparse.ArgumentParser:
     vast_predict_parser.add_argument("--threshold", type=float, default=0.5)
     vast_predict_parser.add_argument("--device", default="cuda")
 
+    vast_state_parser = subparsers.add_parser("vast-state", help="Read current state from a running VAST Remote Control API server")
+    vast_state_parser.add_argument("--host", default="127.0.0.1")
+    vast_state_parser.add_argument("--port", type=int, default=22081)
+
+    vast_live_parser = subparsers.add_parser(
+        "vast-live",
+        help="Watch VAST clicks and write predicted masks directly into the selected segmentation layer",
+    )
+    vast_live_parser.add_argument("--checkpoint", required=True)
+    vast_live_parser.add_argument("--host", default="127.0.0.1")
+    vast_live_parser.add_argument("--port", type=int, default=22081)
+    vast_live_parser.add_argument("--poll-interval", type=float, default=0.1)
+    vast_live_parser.add_argument("--crop-size", type=int, default=512)
+    vast_live_parser.add_argument("--threshold", type=float, default=0.5)
+    vast_live_parser.add_argument("--image-size", type=int)
+    vast_live_parser.add_argument("--device", default="cpu")
+    vast_live_parser.add_argument("--output-dir", default="outputs\\vast_live")
+    vast_live_parser.add_argument("--allowed-uimode", type=int)
+
     feedback_parser = subparsers.add_parser("add-feedback", help="Add a corrected sample for future fine-tuning")
     feedback_parser.add_argument("--image", required=True)
     feedback_parser.add_argument("--mask", required=True)
@@ -139,6 +158,61 @@ def main() -> None:
         print(f"Saved VAST import image to: {result['vast_import_path']}")
         print(f"Saved preview to: {result['vast_preview_path']}")
         print(f"Saved metadata to: {result['metadata_path']}")
+        return
+
+    if args.command == "vast-state":
+        from pointnclick_segmentation.vast_client import VastClient
+
+        try:
+            with VastClient(host=args.host, port=args.port) as client:
+                info = client.get_info()
+                client.set_api_layers_enabled(True)
+                selected_layer, selected_em_layer, selected_seg_layer = client.get_selected_layer_info()
+                selected_segment = None
+                try:
+                    selected_segment = client.get_selected_segment_nr()
+                except Exception as exc:
+                    if not (hasattr(exc, "error_code") and getattr(exc, "error_code") == 21):
+                        raise
+                state = client.get_current_ui_state()
+        except Exception as exc:
+            raise RuntimeError(
+                "Could not connect to the VAST Remote Control API server. "
+                "In VAST Lite, enable Window > Remote Control API Server and confirm the host/port. "
+                f"Underlying error: {exc!r}"
+            ) from exc
+        print(f"Dataset size (x,y,z): {info['uints'][0]}, {info['uints'][1]}, {info['uints'][2]}")
+        print(f"Selected layer: {selected_layer}")
+        print(f"Selected EM layer: {selected_em_layer}")
+        print(f"Selected segmentation layer: {selected_seg_layer}")
+        print(f"Selected segment: {selected_segment if selected_segment is not None else 'Unavailable in current VAST UI state'}")
+        print(f"UI mode: {state['uimode']}")
+        print(f"Mouse voxel: ({state['mousecoordsx']}, {state['mousecoordsy']}, {state['mousecoordsz']})")
+        print(f"Last left click window coords: ({state['lastleftclickx']}, {state['lastleftclicky']})")
+        return
+
+    if args.command == "vast-live":
+        from pointnclick_segmentation.vast_live import VastLiveConfig, run_vast_live_bridge
+
+        config = VastLiveConfig(
+            checkpoint_path=args.checkpoint,
+            host=args.host,
+            port=args.port,
+            poll_interval_s=args.poll_interval,
+            crop_size=args.crop_size,
+            threshold=args.threshold,
+            image_size=args.image_size,
+            device_name=args.device,
+            output_dir=args.output_dir,
+            allowed_uimode=args.allowed_uimode,
+        )
+        try:
+            run_vast_live_bridge(config)
+        except Exception as exc:
+            raise RuntimeError(
+                "VAST live bridge failed. Make sure VAST Lite is running, "
+                "Window > Remote Control API Server is enabled, and the selected segment/layers are valid."
+            ) from exc
         return
 
     if args.command == "add-feedback":

@@ -176,10 +176,56 @@ Working today:
 7. Run `add-feedback`.
 8. Periodically run `finetune`.
 
-Direct live click-in-window automation:
+## Read current VAST state
 
-- VAST Lite 1.5.0 includes a Remote Control API Server and API methods for direct segmentation writes.
-- To finish a true "click in VAST, mask appears immediately" bridge, this repo needs the supplementary VAST API client package or the extracted `VASTControlClass.m` file, which defines the client-side protocol.
-- Once that file is available locally, the remaining work is to connect Python to the VAST API, read the current slice and selected segment, run the model, and push the mask back with the API instead of manual import.
+First make sure VAST Lite is open and `Window > Remote Control API Server` is enabled.
+
+```powershell
+.\.venv\Scripts\python.exe .\run_cli.py vast-state
+```
+
+That should print:
+
+- dataset size
+- selected layer
+- selected EM layer
+- selected segmentation layer
+- selected segment
+- current mouse voxel
+
+## Live VAST bridge
+
+This is the direct bridge. It watches VAST for new left-clicks, reads the current EM crop through the VAST API, runs the model, and writes the predicted mask back into the currently selected segmentation layer.
+
+```powershell
+.\.venv\Scripts\python.exe .\run_cli.py vast-live `
+  --checkpoint runs\baseline\best_model.pt `
+  --device cpu `
+  --crop-size 512 `
+  --output-dir outputs\vast_live
+```
+
+Use it like this:
+
+1. Open your dataset in VAST Lite.
+2. Enable `Window > Remote Control API Server`.
+3. Select the segmentation layer you want to write into.
+4. Select the target segment color/id in VAST.
+5. Start `vast-live` from PowerShell.
+6. In VAST, move the cursor over the target cell and left-click near its middle.
+7. The bridge will write the predicted mask into the selected segmentation layer.
+
+Important limitation in this first live version:
+
+- VAST exposes the last click in window coordinates, but not the clicked voxel directly in the API state payload.
+- The bridge therefore uses the current mouse voxel from VAST when it sees the new click event.
+- In practice, keep the cursor over the target voxel when you click and do not move it immediately after the click.
+
+Debug outputs are saved in `outputs\vast_live`:
+
+- `*_crop.png`
+- `*_mask.png`
+- `*_overlay.png`
+- `*_event.json`
 
 See [examples/vast_workflow.md](/c:/Users/lefty/OneDrive/Documents/GitHub/PointnClick-Segmentation/examples/vast_workflow.md).

@@ -29,13 +29,11 @@ def _resize_mask_back(mask: np.ndarray, size: tuple[int, int]) -> np.ndarray:
     return (np.asarray(pil_mask, dtype=np.uint8) > 0).astype(np.uint8)
 
 
-def predict_mask(
+def predict_mask_from_array(
     checkpoint_path: str | Path,
-    image_path: str | Path,
+    image: np.ndarray,
     x: int,
     y: int,
-    output_mask: str | Path,
-    output_overlay: str | Path | None = None,
     image_size: int | None = None,
     threshold: float = 0.5,
     device_name: str = "cuda",
@@ -45,10 +43,11 @@ def predict_mask(
     train_config = checkpoint.get("config", {})
     model_image_size = image_size or int(train_config.get("image_size", 512))
 
-    image = load_grayscale_image(image_path)
-    original_h, original_w = image.shape
+    if image.ndim != 2:
+        raise ValueError("predict_mask_from_array expects a 2D grayscale image")
 
-    resized_image = _resize_for_model(image, model_image_size)
+    original_h, original_w = image.shape
+    resized_image = _resize_for_model(image.astype(np.uint8), model_image_size)
     scale_x = model_image_size / original_w
     scale_y = model_image_size / original_h
     model_x = min(max(int(round(x * scale_x)), 0), model_image_size - 1)
@@ -68,7 +67,30 @@ def predict_mask(
         probs = torch.sigmoid(logits)[0, 0].cpu().numpy()
 
     pred_mask_small = (probs >= threshold).astype(np.uint8)
-    pred_mask = _resize_mask_back(pred_mask_small, (original_w, original_h))
+    return _resize_mask_back(pred_mask_small, (original_w, original_h))
+
+
+def predict_mask(
+    checkpoint_path: str | Path,
+    image_path: str | Path,
+    x: int,
+    y: int,
+    output_mask: str | Path,
+    output_overlay: str | Path | None = None,
+    image_size: int | None = None,
+    threshold: float = 0.5,
+    device_name: str = "cuda",
+) -> np.ndarray:
+    image = load_grayscale_image(image_path)
+    pred_mask = predict_mask_from_array(
+        checkpoint_path=checkpoint_path,
+        image=image,
+        x=x,
+        y=y,
+        image_size=image_size,
+        threshold=threshold,
+        device_name=device_name,
+    )
 
     ensure_dir(Path(output_mask).parent)
     save_mask(pred_mask, output_mask)

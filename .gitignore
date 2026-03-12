@@ -1,5 +1,12 @@
 .venv/
 venv/
+__pycache__/
+*.pyc
+outputs/
+runs/
+vast_tmp/
+vast_package_extracted/
+src/*.egg-info/
 
 .venv/Lib/site-packages/torch/lib/dnn.lib
 .venv/Lib/site-packages/torch/lib/torch_cpu.dll
