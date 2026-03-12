@@ -28,6 +28,22 @@ def build_parser() -> argparse.ArgumentParser:
     predict_parser.add_argument("--threshold", type=float, default=0.5)
     predict_parser.add_argument("--device", default="cuda")
 
+    vast_predict_parser = subparsers.add_parser(
+        "predict-vast-import",
+        help="Predict a mask and write a VAST-importable RGB segmentation image",
+    )
+    vast_predict_parser.add_argument("--checkpoint", required=True)
+    vast_predict_parser.add_argument("--image", required=True)
+    vast_predict_parser.add_argument("--x", required=True, type=int)
+    vast_predict_parser.add_argument("--y", required=True, type=int)
+    vast_predict_parser.add_argument("--segment-id", required=True, type=int)
+    vast_predict_parser.add_argument("--z-index", required=True, type=int)
+    vast_predict_parser.add_argument("--output-dir", required=True)
+    vast_predict_parser.add_argument("--output-stem")
+    vast_predict_parser.add_argument("--image-size", type=int)
+    vast_predict_parser.add_argument("--threshold", type=float, default=0.5)
+    vast_predict_parser.add_argument("--device", default="cuda")
+
     feedback_parser = subparsers.add_parser("add-feedback", help="Add a corrected sample for future fine-tuning")
     feedback_parser.add_argument("--image", required=True)
     feedback_parser.add_argument("--mask", required=True)
@@ -102,6 +118,27 @@ def main() -> None:
         print(f"Saved predicted mask to: {args.output_mask}")
         if args.output_overlay:
             print(f"Saved overlay to: {args.output_overlay}")
+        return
+
+    if args.command == "predict-vast-import":
+        from pointnclick_segmentation.vast import predict_vast_import_image
+
+        result = predict_vast_import_image(
+            checkpoint_path=args.checkpoint,
+            image_path=args.image,
+            x=args.x,
+            y=args.y,
+            segment_id=args.segment_id,
+            z_index=args.z_index,
+            output_dir=args.output_dir,
+            output_stem=args.output_stem,
+            image_size=args.image_size,
+            threshold=args.threshold,
+            device_name=args.device,
+        )
+        print(f"Saved VAST import image to: {result['vast_import_path']}")
+        print(f"Saved preview to: {result['vast_preview_path']}")
+        print(f"Saved metadata to: {result['metadata_path']}")
         return
 
     if args.command == "add-feedback":

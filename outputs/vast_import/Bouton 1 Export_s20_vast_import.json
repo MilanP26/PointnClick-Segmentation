@@ -1,0 +1,21 @@
+{
+  "image_path": "exports\\EM\\Bouton 1\\Bouton 1 Export_s20.png",
+  "checkpoint_path": "runs\\baseline\\best_model.pt",
+  "click_x": 150,
+  "click_y": 150,
+  "segment_id": 123,
+  "z_index": 20,
+  "start_x": 0,
+  "start_y": 0,
+  "start_z": 20,
+  "binary_mask_path": "outputs\\vast_import\\Bouton 1 Export_s20_mask_binary.png",
+  "overlay_path": "outputs\\vast_import\\Bouton 1 Export_s20_overlay.png",
+  "vast_import_path": "outputs\\vast_import\\Bouton 1 Export_s20_vast_import.png",
+  "vast_preview_path": "outputs\\vast_import\\Bouton 1 Export_s20_vast_preview.png",
+  "import_notes": [
+    "In VAST Lite, use File > Import Segmentations from Images.",
+    "Choose the generated RGB image.",
+    "Use start coordinates X=0, Y=0, Z=<z_index> for a full-slice import.",
+    "Assign the import to the segmentation layer you want to update."
+  ]
+}

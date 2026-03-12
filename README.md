@@ -111,6 +111,36 @@ This will:
   --output-overlay outputs\slice_0142_cellA_overlay.png
 ```
 
+## Predict and create a VAST-importable segmentation image
+
+Use this when you want to bring the predicted mask back into VAST as a real segmentation image.
+
+```powershell
+.\.venv\Scripts\python.exe .\run_cli.py predict-vast-import `
+  --checkpoint runs\baseline\best_model.pt `
+  --image "exports\EM\Bouton 1\Bouton 1 Export_s20.png" `
+  --x 150 `
+  --y 150 `
+  --segment-id 123 `
+  --z-index 20 `
+  --output-dir outputs\vast_import `
+  --device cpu
+```
+
+This writes:
+
+- a binary mask
+- a regular overlay preview
+- an RGB segmentation image encoded for VAST import
+- a JSON metadata file with the import coordinates
+
+Then in VAST Lite:
+
+1. Use `File > Import Segmentations from Images`
+2. Choose the generated `*_vast_import.png`
+3. Set start coordinates to `X=0`, `Y=0`, `Z=<z-index>`
+4. Import into the desired segmentation layer
+
 ## Add corrected masks and fine-tune
 
 ```powershell
@@ -135,14 +165,21 @@ This will:
 
 ## VAST Lite workflow
 
-This first version uses a sidecar workflow:
+Working today:
 
 1. Export a 2D slice image from VAST Lite.
 2. Record the click location on the target cell.
-3. Run `predict`.
-4. Review and correct the mask in VAST.
-5. Export the corrected mask.
-6. Run `add-feedback`.
-7. Periodically run `finetune`.
+3. Run `predict` or `predict-vast-import`.
+4. If using `predict-vast-import`, import the generated VAST segmentation image.
+5. Review and correct the mask in VAST.
+6. Export the corrected mask.
+7. Run `add-feedback`.
+8. Periodically run `finetune`.
+
+Direct live click-in-window automation:
+
+- VAST Lite 1.5.0 includes a Remote Control API Server and API methods for direct segmentation writes.
+- To finish a true "click in VAST, mask appears immediately" bridge, this repo needs the supplementary VAST API client package or the extracted `VASTControlClass.m` file, which defines the client-side protocol.
+- Once that file is available locally, the remaining work is to connect Python to the VAST API, read the current slice and selected segment, run the model, and push the mask back with the API instead of manual import.
 
 See [examples/vast_workflow.md](/c:/Users/lefty/OneDrive/Documents/GitHub/PointnClick-Segmentation/examples/vast_workflow.md).
