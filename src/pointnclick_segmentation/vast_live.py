@@ -56,9 +56,45 @@ def run_vast_live_bridge(config: VastLiveConfig) -> None:
             )
             last_signature: tuple[int, int, int, int] | None = None
             prev_lbuttondown = 0
+            armed_mode: str | None = None
             while True:
+                wants_feedback = _is_key_pressed(config.feedback_capture_key)
+                wants_auto = _is_key_pressed(config.auto_segment_key)
+                current_lbuttondown = int(_is_left_button_down())
+
+                # Arm only when the user is explicitly holding one of the bridge keys.
+                if armed_mode is None:
+                    if wants_feedback:
+                        armed_mode = "feedback"
+                    elif wants_auto:
+                        armed_mode = "auto"
+
+                # Stay completely out of the way unless we are currently armed for an explicit bridge action.
+                if armed_mode is None:
+                    prev_lbuttondown = current_lbuttondown
+                    time.sleep(config.poll_interval_s)
+                    continue
+
+                # If the user let go of the modifier before clicking, cancel the armed action.
+                if armed_mode == "feedback" and not wants_feedback and current_lbuttondown == 0:
+                    armed_mode = None
+                    prev_lbuttondown = current_lbuttondown
+                    time.sleep(config.poll_interval_s)
+                    continue
+                if armed_mode == "auto" and not wants_auto and current_lbuttondown == 0:
+                    armed_mode = None
+                    prev_lbuttondown = current_lbuttondown
+                    time.sleep(config.poll_interval_s)
+                    continue
+
+                # Wait for a real left-button release from the local OS before querying VAST.
+                if not (prev_lbuttondown == 1 and current_lbuttondown == 0):
+                    prev_lbuttondown = current_lbuttondown
+                    time.sleep(config.poll_interval_s)
+                    continue
+                prev_lbuttondown = current_lbuttondown
+
                 state = client.get_current_ui_state()
-                current_lbuttondown = int(state["lbuttondown"])
                 signature = (
                     int(state["lastleftclickx"]),
                     int(state["lastleftclicky"]),
@@ -67,27 +103,20 @@ def run_vast_live_bridge(config: VastLiveConfig) -> None:
                 )
                 if int(state["deletepressed"]) == 1:
                     last_signature = signature
-                    prev_lbuttondown = current_lbuttondown
+                    armed_mode = None
                     time.sleep(config.poll_interval_s)
                     continue
-                if not (prev_lbuttondown == 1 and current_lbuttondown == 0):
-                    prev_lbuttondown = current_lbuttondown
-                    time.sleep(config.poll_interval_s)
-                    continue
-                prev_lbuttondown = current_lbuttondown
                 if signature == last_signature:
+                    armed_mode = None
                     time.sleep(config.poll_interval_s)
                     continue
                 last_signature = signature
                 if state["lastleftclickx"] < 0 or state["lastleftclicky"] < 0:
+                    armed_mode = None
                     time.sleep(config.poll_interval_s)
                     continue
                 if config.allowed_uimode is not None and state["uimode"] != config.allowed_uimode:
-                    time.sleep(config.poll_interval_s)
-                    continue
-                wants_feedback = _is_key_pressed(config.feedback_capture_key)
-                wants_auto = _is_key_pressed(config.auto_segment_key)
-                if not wants_feedback and not wants_auto:
+                    armed_mode = None
                     time.sleep(config.poll_interval_s)
                     continue
                 try:
@@ -96,14 +125,16 @@ def run_vast_live_bridge(config: VastLiveConfig) -> None:
                 except VastProtocolError as exc:
                     if exc.error_code == 21:
                         client.set_api_layers_enabled(False)
+                        armed_mode = None
                         time.sleep(config.poll_interval_s)
                         continue
                     raise
                 if selected_segment <= 0:
                     client.set_api_layers_enabled(False)
+                    armed_mode = None
                     time.sleep(config.poll_interval_s)
                     continue
-                if wants_feedback:
+                if armed_mode == "feedback":
                     _capture_feedback_click(
                         client=client,
                         config=config,
@@ -116,6 +147,7 @@ def run_vast_live_bridge(config: VastLiveConfig) -> None:
                         state=state,
                     )
                     client.set_api_layers_enabled(False)
+                    armed_mode = None
                     time.sleep(config.poll_interval_s)
                     continue
                 _process_click(
@@ -131,6 +163,7 @@ def run_vast_live_bridge(config: VastLiveConfig) -> None:
                     state=state,
                 )
                 client.set_api_layers_enabled(False)
+                armed_mode = None
                 time.sleep(config.poll_interval_s)
         finally:
             try:
@@ -363,3 +396,7 @@ def _is_key_pressed(key: str) -> bool:
         return False
     vk = ord(key.upper())
     return bool(ctypes.windll.user32.GetAsyncKeyState(vk) & 0x8000)
+
+
+def _is_left_button_down() -> bool:
+    return bool(ctypes.windll.user32.GetAsyncKeyState(0x01) & 0x8000)
