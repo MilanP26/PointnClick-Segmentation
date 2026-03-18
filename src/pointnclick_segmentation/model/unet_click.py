@@ -46,7 +46,7 @@ class Up(nn.Module):
         return self.conv(x)
 
 
-class ClickUNet(nn.Module):
+class UNet2D(nn.Module):
     def __init__(self, in_channels: int = 2, base_channels: int = 32) -> None:
         super().__init__()
         self.stem = DoubleConv(in_channels, base_channels)
@@ -73,3 +73,7 @@ class ClickUNet(nn.Module):
         x = self.up3(x, x2)
         x = self.up4(x, x1)
         return self.head(x)
+
+
+class ClickUNet(UNet2D):
+    pass

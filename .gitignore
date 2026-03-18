@@ -12,3 +12,9 @@ src/*.egg-info/
 .venv/Lib/site-packages/torch/lib/torch_cpu.dll
 venv/Lib/site-packages/torch/lib/dnn.lib
 venv/Lib/site-packages/torch/lib/torch_cpu.dll
+em.zip
+mask.zip
+data/Training Round 2/
+data/*/em.zip
+data/*/mask.zip
+data/worm_*/

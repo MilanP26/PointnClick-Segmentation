@@ -4,6 +4,7 @@ import argparse
 
 from pointnclick_segmentation.config import TrainConfig
 from pointnclick_segmentation.prepare_exports import prepare_exports_dataset
+from pointnclick_segmentation.prepare_worm import prepare_worm_dataset
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -82,6 +83,22 @@ def build_parser() -> argparse.ArgumentParser:
     prepare_parser.add_argument("--val-boutons", help="Comma-separated bouton ids for validation, for example 16,17,18,19")
     prepare_parser.add_argument("--no-resize-masks", action="store_true", help="Fail if a bouton mask size does not match the EM export")
 
+    prepare_worm_parser = subparsers.add_parser(
+        "prepare-worm",
+        help="Build train/val/test data from a dense worm dataset stored as em/mask folders or em.zip/mask.zip",
+    )
+    prepare_worm_parser.add_argument("--data-dir", default="data\\Training Round 2")
+    prepare_worm_parser.add_argument("--output-dir", required=True)
+    prepare_worm_parser.add_argument("--val-fraction", type=float, default=0.2)
+    prepare_worm_parser.add_argument("--test-fraction", type=float, default=0.1)
+
+    evaluate_parser = subparsers.add_parser("evaluate", help="Evaluate a checkpoint on a held-out dataset")
+    evaluate_parser.add_argument("--checkpoint", required=True)
+    evaluate_parser.add_argument("--data-dir", required=True)
+    evaluate_parser.add_argument("--batch-size", type=int, default=4)
+    evaluate_parser.add_argument("--num-workers", type=int, default=0)
+    evaluate_parser.add_argument("--device", default="cuda")
+
     return parser
 
 
@@ -91,6 +108,7 @@ def _add_training_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--feedback-dir")
     parser.add_argument("--image-size", type=int, default=512)
+    parser.add_argument("--crop-size", type=int, help="Training crop size before optional resize. Defaults to image-size.")
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--learning-rate", type=float, default=1e-3)
@@ -98,6 +116,10 @@ def _add_training_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--num-workers", type=int, default=0)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", default="cuda")
+    parser.add_argument("--base-channels", type=int, default=32)
+    parser.add_argument("--selection-metric", choices=["vi", "iou"], default="vi")
+    parser.add_argument("--early-stopping-patience", type=int, default=10)
+    parser.add_argument("--min-epochs", type=int, default=10)
 
 
 def main() -> None:
@@ -113,6 +135,7 @@ def main() -> None:
             output_dir=args.output_dir,
             feedback_dir=args.feedback_dir,
             image_size=args.image_size,
+            crop_size=args.crop_size,
             batch_size=args.batch_size,
             epochs=args.epochs,
             learning_rate=args.learning_rate,
@@ -121,9 +144,19 @@ def main() -> None:
             seed=args.seed,
             device=args.device,
             resume_checkpoint=getattr(args, "checkpoint", None),
+            base_channels=args.base_channels,
+            selection_metric=args.selection_metric,
+            early_stopping_patience=args.early_stopping_patience,
+            min_epochs=args.min_epochs,
         )
         result = train_model(config)
-        print(f"Training complete. Best val IoU: {result['best_val_iou']:.4f}")
+        best_metrics = result["best_metrics"] or {}
+        print(
+            "Training complete. "
+            f"Best epoch: {result['best_epoch']}. "
+            f"Best val IoU: {best_metrics.get('iou', 0.0):.4f}. "
+            f"Best val VI: {best_metrics.get('vi', 0.0):.4f}"
+        )
         print(f"Artifacts saved in: {result['output_dir']}")
         return
 
@@ -256,6 +289,35 @@ def main() -> None:
         print(f"Training samples: {result['num_train']}")
         print(f"Validation samples: {result['num_val']}")
         print(f"Validation boutons: {result['val_boutons']}")
+        return
+
+    if args.command == "prepare-worm":
+        result = prepare_worm_dataset(
+            data_dir=args.data_dir,
+            output_dir=args.output_dir,
+            val_fraction=args.val_fraction,
+            test_fraction=args.test_fraction,
+        )
+        print(f"Prepared worm dataset in: {args.output_dir}")
+        print(f"Training slices: {result['num_train']}")
+        print(f"Validation slices: {result['num_val']}")
+        print(f"Test slices: {result['num_test']}")
+        return
+
+    if args.command == "evaluate":
+        from pointnclick_segmentation.train import evaluate_model
+
+        result = evaluate_model(
+            checkpoint_path=args.checkpoint,
+            data_dir=args.data_dir,
+            batch_size=args.batch_size,
+            num_workers=args.num_workers,
+            device_name=args.device,
+        )
+        print(f"Loss: {result['loss']:.4f}")
+        print(f"IoU: {result['iou']:.4f}")
+        print(f"Dice: {result['dice']:.4f}")
+        print(f"VI: {result['vi']:.4f}")
         return
 
     raise ValueError(f"Unsupported command: {args.command}")

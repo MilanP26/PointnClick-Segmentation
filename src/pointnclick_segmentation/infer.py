@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 import torch
 
-from pointnclick_segmentation.model import ClickUNet
+from pointnclick_segmentation.model import UNet2D
 from pointnclick_segmentation.utils import ensure_dir, load_grayscale_image, resolve_device, save_mask, save_overlay
 
 
@@ -29,6 +29,21 @@ def _resize_mask_back(mask: np.ndarray, size: tuple[int, int]) -> np.ndarray:
     return (np.asarray(pil_mask, dtype=np.uint8) > 0).astype(np.uint8)
 
 
+def _extract_with_padding(array: np.ndarray, x0: int, y0: int, x1: int, y1: int, fill_value: int) -> np.ndarray:
+    h, w = array.shape
+    out = np.full((y1 - y0, x1 - x0), fill_value, dtype=array.dtype)
+    src_x0 = max(0, x0)
+    src_y0 = max(0, y0)
+    src_x1 = min(w, x1)
+    src_y1 = min(h, y1)
+    dst_x0 = src_x0 - x0
+    dst_y0 = src_y0 - y0
+    dst_x1 = dst_x0 + (src_x1 - src_x0)
+    dst_y1 = dst_y0 + (src_y1 - src_y0)
+    out[dst_y0:dst_y1, dst_x0:dst_x1] = array[src_y0:src_y1, src_x0:src_x1]
+    return out
+
+
 def predict_mask_from_array(
     checkpoint_path: str | Path,
     image: np.ndarray,
@@ -42,23 +57,32 @@ def predict_mask_from_array(
     checkpoint = torch.load(checkpoint_path, map_location=device)
     train_config = checkpoint.get("config", {})
     model_image_size = image_size or int(train_config.get("image_size", 512))
+    crop_size = int(train_config.get("crop_size") or model_image_size)
 
     if image.ndim != 2:
         raise ValueError("predict_mask_from_array expects a 2D grayscale image")
 
     original_h, original_w = image.shape
-    resized_image = _resize_for_model(image.astype(np.uint8), model_image_size)
-    scale_x = model_image_size / original_w
-    scale_y = model_image_size / original_h
-    model_x = min(max(int(round(x * scale_x)), 0), model_image_size - 1)
-    model_y = min(max(int(round(y * scale_y)), 0), model_image_size - 1)
+    crop_half = crop_size // 2
+    x0 = x - crop_half
+    y0 = y - crop_half
+    x1 = x0 + crop_size
+    y1 = y0 + crop_size
+    crop = _extract_with_padding(image.astype(np.uint8), x0, y0, x1, y1, fill_value=int(image.mean()))
+
+    resized_image = _resize_for_model(crop, model_image_size)
+    model_x = min(max(int(round((x - x0) * model_image_size / crop_size)), 0), model_image_size - 1)
+    model_y = min(max(int(round((y - y0) * model_image_size / crop_size)), 0), model_image_size - 1)
 
     click_map = make_click_map(resized_image.shape, model_x, model_y)
     input_tensor = torch.from_numpy(resized_image.astype(np.float32) / 255.0).unsqueeze(0)
     click_tensor = torch.from_numpy(click_map).unsqueeze(0)
     input_tensor = torch.cat([input_tensor, click_tensor], dim=0).unsqueeze(0).to(device)
 
-    model = ClickUNet().to(device)
+    model = UNet2D(
+        in_channels=2,
+        base_channels=int(train_config.get("base_channels", 32)),
+    ).to(device)
     model.load_state_dict(checkpoint["model"])
     model.eval()
 
@@ -67,7 +91,19 @@ def predict_mask_from_array(
         probs = torch.sigmoid(logits)[0, 0].cpu().numpy()
 
     pred_mask_small = (probs >= threshold).astype(np.uint8)
-    return _resize_mask_back(pred_mask_small, (original_w, original_h))
+    pred_crop = _resize_mask_back(pred_mask_small, (crop_size, crop_size))
+
+    full_mask = np.zeros((original_h, original_w), dtype=np.uint8)
+    src_x0 = max(0, x0)
+    src_y0 = max(0, y0)
+    src_x1 = min(original_w, x1)
+    src_y1 = min(original_h, y1)
+    dst_x0 = src_x0 - x0
+    dst_y0 = src_y0 - y0
+    dst_x1 = dst_x0 + (src_x1 - src_x0)
+    dst_y1 = dst_y0 + (src_y1 - src_y0)
+    full_mask[src_y0:src_y1, src_x0:src_x1] = pred_crop[dst_y0:dst_y1, dst_x0:dst_x1]
+    return full_mask
 
 
 def predict_mask(

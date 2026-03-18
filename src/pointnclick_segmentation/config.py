@@ -12,6 +12,7 @@ class TrainConfig:
     output_dir: str
     feedback_dir: str | None = None
     image_size: int = 512
+    crop_size: int | None = None
     batch_size: int = 8
     epochs: int = 50
     learning_rate: float = 1e-3
@@ -20,6 +21,10 @@ class TrainConfig:
     seed: int = 42
     device: str = "cuda"
     resume_checkpoint: str | None = None
+    base_channels: int = 32
+    selection_metric: str = "vi"
+    early_stopping_patience: int = 10
+    min_epochs: int = 10
 
     def save(self, path: str | Path) -> None:
         Path(path).write_text(json.dumps(asdict(self), indent=2), encoding="utf-8")
