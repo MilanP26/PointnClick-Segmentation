@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\lefty\OneDrive\Documents\GitHub\PointnClick-Segmentation\.venv"
+VIRTUAL_ENV="C:\Ishaan\Segmentation\milan_experiments_with_2d_unets_worm\PointnClick-Segmentation\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
