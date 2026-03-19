@@ -13,7 +13,6 @@ from pointnclick_segmentation.metrics import (
     batch_dice_from_logits,
     batch_iou_from_logits,
     batch_vi_from_logits,
-    dice_loss_from_logits,
 )
 from pointnclick_segmentation.model import UNet2D
 from pointnclick_segmentation.utils import ensure_dir, resolve_device, save_json, set_seed
@@ -22,7 +21,7 @@ from pointnclick_segmentation.utils import ensure_dir, resolve_device, save_json
 def _build_model(config: TrainConfig, device: torch.device) -> nn.Module:
     model = UNet2D(in_channels=2, base_channels=config.base_channels).to(device)
     if config.resume_checkpoint:
-        state = torch.load(config.resume_checkpoint, map_location=device)
+        state = torch.load(config.resume_checkpoint, map_location=device, weights_only=False)
         model.load_state_dict(state["model"])
     return model
 
@@ -51,7 +50,7 @@ def _run_epoch(
             inputs = batch["input"].to(device)
             masks = batch["mask"].to(device)
             logits = model(inputs)
-            loss = bce(logits, masks) + dice_loss_from_logits(logits, masks)
+            loss = bce(logits, masks)
 
             if optimizer is not None:
                 optimizer.zero_grad(set_to_none=True)
@@ -162,6 +161,7 @@ def train_model(config: TrainConfig) -> dict[str, Any]:
                 "val_iou": val_metrics["iou"],
                 "val_dice": val_metrics["dice"],
                 "val_vi": val_metrics["vi"],
+                "loss_function": config.loss_function,
             },
         }
         torch.save(checkpoint, output_dir / "last_model.pt")
@@ -177,6 +177,7 @@ def train_model(config: TrainConfig) -> dict[str, Any]:
         save_json(
             {
                 "selection_metric": config.selection_metric,
+                "loss_function": config.loss_function,
                 "best_epoch": best_epoch,
                 "best_metrics": best_metrics,
                 "history": history,
@@ -202,7 +203,7 @@ def evaluate_model(
     device_name: str = "cuda",
 ) -> dict[str, float]:
     device = resolve_device(device_name)
-    checkpoint = torch.load(checkpoint_path, map_location=device)
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
     checkpoint_config = checkpoint.get("config", {})
     config = TrainConfig(
         train_dir=data_dir,
@@ -214,6 +215,7 @@ def evaluate_model(
         num_workers=num_workers,
         device=device_name,
         base_channels=int(checkpoint_config.get("base_channels", 32)),
+        loss_function=str(checkpoint_config.get("loss_function", "bce")),
     )
     loader = build_dataloader(
         root_dir=data_dir,

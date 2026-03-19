@@ -22,6 +22,7 @@ class TrainConfig:
     device: str = "cuda"
     resume_checkpoint: str | None = None
     base_channels: int = 32
+    loss_function: str = "bce"
     selection_metric: str = "vi"
     early_stopping_patience: int = 10
     min_epochs: int = 10

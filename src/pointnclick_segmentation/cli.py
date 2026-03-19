@@ -99,6 +99,16 @@ def build_parser() -> argparse.ArgumentParser:
     evaluate_parser.add_argument("--num-workers", type=int, default=0)
     evaluate_parser.add_argument("--device", default="cuda")
 
+    report_parser = subparsers.add_parser("report", help="Plot train/eval loss curves and export held-out inference examples")
+    report_parser.add_argument("--metrics", required=True, help="Path to metrics.json from a training run")
+    report_parser.add_argument("--checkpoint", required=True, help="Path to the checkpoint to use for inference examples")
+    report_parser.add_argument("--data-dir", required=True, help="Held-out split directory with images/ and masks/")
+    report_parser.add_argument("--output-dir", required=True)
+    report_parser.add_argument("--max-examples", type=int, default=6)
+    report_parser.add_argument("--device", default="cuda")
+    report_parser.add_argument("--log-scale", action="store_true", help="Use a log-scaled y-axis for the loss plot")
+    report_parser.add_argument("--loss-label", help="Optional custom y-axis label for the saved loss curve")
+
     return parser
 
 
@@ -117,6 +127,7 @@ def _add_training_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--base-channels", type=int, default=32)
+    parser.add_argument("--loss-function", choices=["bce"], default="bce")
     parser.add_argument("--selection-metric", choices=["vi", "iou"], default="vi")
     parser.add_argument("--early-stopping-patience", type=int, default=10)
     parser.add_argument("--min-epochs", type=int, default=10)
@@ -145,6 +156,7 @@ def main() -> None:
             device=args.device,
             resume_checkpoint=getattr(args, "checkpoint", None),
             base_channels=args.base_channels,
+            loss_function=args.loss_function,
             selection_metric=args.selection_metric,
             early_stopping_patience=args.early_stopping_patience,
             min_epochs=args.min_epochs,
@@ -318,6 +330,24 @@ def main() -> None:
         print(f"IoU: {result['iou']:.4f}")
         print(f"Dice: {result['dice']:.4f}")
         print(f"VI: {result['vi']:.4f}")
+        return
+
+    if args.command == "report":
+        from pointnclick_segmentation.analysis import build_training_report
+
+        result = build_training_report(
+            metrics_path=args.metrics,
+            checkpoint_path=args.checkpoint,
+            data_dir=args.data_dir,
+            output_dir=args.output_dir,
+            max_examples=args.max_examples,
+            device_name=args.device,
+            log_scale=args.log_scale,
+            loss_label=args.loss_label,
+        )
+        print(f"Saved loss plot to: {result['loss_plot']}")
+        print(f"Saved example grid to: {result['example_grid']}")
+        print(f"Saved example files in: {result['examples_dir']}")
         return
 
     raise ValueError(f"Unsupported command: {args.command}")

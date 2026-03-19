@@ -54,7 +54,7 @@ def predict_mask_from_array(
     device_name: str = "cuda",
 ) -> np.ndarray:
     device = resolve_device(device_name)
-    checkpoint = torch.load(checkpoint_path, map_location=device)
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
     train_config = checkpoint.get("config", {})
     model_image_size = image_size or int(train_config.get("image_size", 512))
     crop_size = int(train_config.get("crop_size") or model_image_size)
