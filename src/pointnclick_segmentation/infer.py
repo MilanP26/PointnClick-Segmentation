@@ -44,6 +44,84 @@ def _extract_with_padding(array: np.ndarray, x0: int, y0: int, x1: int, y1: int,
     return out
 
 
+class LoadedPredictor:
+    def __init__(
+        self,
+        checkpoint_path: str | Path,
+        image_size: int | None = None,
+        device_name: str = "cuda",
+    ) -> None:
+        self.checkpoint_path = str(checkpoint_path)
+        self.device = resolve_device(device_name)
+        checkpoint = torch.load(self.checkpoint_path, map_location=self.device, weights_only=False)
+        self.train_config = checkpoint.get("config", {})
+        self.model_image_size = image_size or int(self.train_config.get("image_size", 512))
+        self.crop_size = int(self.train_config.get("crop_size") or self.model_image_size)
+        self.use_autocast = self.device.type == "cuda"
+        if self.use_autocast:
+            torch.backends.cudnn.benchmark = True
+        self.model = UNet2D(
+            in_channels=2,
+            base_channels=int(self.train_config.get("base_channels", 32)),
+        ).to(self.device)
+        if self.use_autocast:
+            self.model = self.model.to(memory_format=torch.channels_last)
+        self.model.load_state_dict(checkpoint["model"])
+        self.model.eval()
+
+    def predict(
+        self,
+        image: np.ndarray,
+        x: int,
+        y: int,
+        threshold: float = 0.5,
+    ) -> np.ndarray:
+        if image.ndim != 2:
+            raise ValueError("predict expects a 2D grayscale image")
+
+        original_h, original_w = image.shape
+        crop_half = self.crop_size // 2
+        x0 = x - crop_half
+        y0 = y - crop_half
+        x1 = x0 + self.crop_size
+        y1 = y0 + self.crop_size
+        crop = _extract_with_padding(image.astype(np.uint8), x0, y0, x1, y1, fill_value=int(image.mean()))
+
+        resized_image = _resize_for_model(crop, self.model_image_size)
+        model_x = min(max(int(round((x - x0) * self.model_image_size / self.crop_size)), 0), self.model_image_size - 1)
+        model_y = min(max(int(round((y - y0) * self.model_image_size / self.crop_size)), 0), self.model_image_size - 1)
+
+        click_map = make_click_map(resized_image.shape, model_x, model_y)
+        input_tensor = torch.from_numpy(resized_image.astype(np.float32) / 255.0).unsqueeze(0)
+        click_tensor = torch.from_numpy(click_map).unsqueeze(0)
+        input_tensor = torch.cat([input_tensor, click_tensor], dim=0).unsqueeze(0).to(self.device)
+        if self.use_autocast:
+            input_tensor = input_tensor.contiguous(memory_format=torch.channels_last)
+
+        with torch.inference_mode():
+            if self.use_autocast:
+                with torch.autocast(device_type="cuda", dtype=torch.float16):
+                    logits = self.model(input_tensor)
+            else:
+                logits = self.model(input_tensor)
+            probs = torch.sigmoid(logits)[0, 0].cpu().numpy()
+
+        pred_mask_small = (probs >= threshold).astype(np.uint8)
+        pred_crop = _resize_mask_back(pred_mask_small, (self.crop_size, self.crop_size))
+
+        full_mask = np.zeros((original_h, original_w), dtype=np.uint8)
+        src_x0 = max(0, x0)
+        src_y0 = max(0, y0)
+        src_x1 = min(original_w, x1)
+        src_y1 = min(original_h, y1)
+        dst_x0 = src_x0 - x0
+        dst_y0 = src_y0 - y0
+        dst_x1 = dst_x0 + (src_x1 - src_x0)
+        dst_y1 = dst_y0 + (src_y1 - src_y0)
+        full_mask[src_y0:src_y1, src_x0:src_x1] = pred_crop[dst_y0:dst_y1, dst_x0:dst_x1]
+        return full_mask
+
+
 def predict_mask_from_array(
     checkpoint_path: str | Path,
     image: np.ndarray,
@@ -53,57 +131,8 @@ def predict_mask_from_array(
     threshold: float = 0.5,
     device_name: str = "cuda",
 ) -> np.ndarray:
-    device = resolve_device(device_name)
-    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
-    train_config = checkpoint.get("config", {})
-    model_image_size = image_size or int(train_config.get("image_size", 512))
-    crop_size = int(train_config.get("crop_size") or model_image_size)
-
-    if image.ndim != 2:
-        raise ValueError("predict_mask_from_array expects a 2D grayscale image")
-
-    original_h, original_w = image.shape
-    crop_half = crop_size // 2
-    x0 = x - crop_half
-    y0 = y - crop_half
-    x1 = x0 + crop_size
-    y1 = y0 + crop_size
-    crop = _extract_with_padding(image.astype(np.uint8), x0, y0, x1, y1, fill_value=int(image.mean()))
-
-    resized_image = _resize_for_model(crop, model_image_size)
-    model_x = min(max(int(round((x - x0) * model_image_size / crop_size)), 0), model_image_size - 1)
-    model_y = min(max(int(round((y - y0) * model_image_size / crop_size)), 0), model_image_size - 1)
-
-    click_map = make_click_map(resized_image.shape, model_x, model_y)
-    input_tensor = torch.from_numpy(resized_image.astype(np.float32) / 255.0).unsqueeze(0)
-    click_tensor = torch.from_numpy(click_map).unsqueeze(0)
-    input_tensor = torch.cat([input_tensor, click_tensor], dim=0).unsqueeze(0).to(device)
-
-    model = UNet2D(
-        in_channels=2,
-        base_channels=int(train_config.get("base_channels", 32)),
-    ).to(device)
-    model.load_state_dict(checkpoint["model"])
-    model.eval()
-
-    with torch.no_grad():
-        logits = model(input_tensor)
-        probs = torch.sigmoid(logits)[0, 0].cpu().numpy()
-
-    pred_mask_small = (probs >= threshold).astype(np.uint8)
-    pred_crop = _resize_mask_back(pred_mask_small, (crop_size, crop_size))
-
-    full_mask = np.zeros((original_h, original_w), dtype=np.uint8)
-    src_x0 = max(0, x0)
-    src_y0 = max(0, y0)
-    src_x1 = min(original_w, x1)
-    src_y1 = min(original_h, y1)
-    dst_x0 = src_x0 - x0
-    dst_y0 = src_y0 - y0
-    dst_x1 = dst_x0 + (src_x1 - src_x0)
-    dst_y1 = dst_y0 + (src_y1 - src_y0)
-    full_mask[src_y0:src_y1, src_x0:src_x1] = pred_crop[dst_y0:dst_y1, dst_x0:dst_x1]
-    return full_mask
+    predictor = LoadedPredictor(checkpoint_path=checkpoint_path, image_size=image_size, device_name=device_name)
+    return predictor.predict(image=image, x=x, y=y, threshold=threshold)
 
 
 def predict_mask(

@@ -36,7 +36,7 @@ class VastClient:
     SETSELECTEDAPILAYERNR = 104
     GETCURRENTUISTATE = 110
 
-    def __init__(self, host: str = "127.0.0.1", port: int = 22081, timeout_s: float = 5.0) -> None:
+    def __init__(self, host: str = "127.0.0.1", port: int = 22081, timeout_s: float = 30.0) -> None:
         self.host = host
         self.port = port
         self.timeout_s = timeout_s
@@ -326,7 +326,12 @@ class VastClient:
         remaining = size
         while remaining > 0:
             assert self._socket is not None
-            chunk = self._socket.recv(remaining)
+            try:
+                chunk = self._socket.recv(remaining)
+            except TimeoutError as exc:
+                raise VastProtocolError(
+                    f"Timed out while waiting for a VAST response after {self.timeout_s:.1f}s"
+                ) from exc
             if not chunk:
                 raise VastProtocolError("Connection closed while reading VAST response")
             chunks.append(chunk)

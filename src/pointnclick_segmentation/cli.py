@@ -48,6 +48,7 @@ def build_parser() -> argparse.ArgumentParser:
     vast_state_parser = subparsers.add_parser("vast-state", help="Read current state from a running VAST Remote Control API server")
     vast_state_parser.add_argument("--host", default="127.0.0.1")
     vast_state_parser.add_argument("--port", type=int, default=22081)
+    vast_state_parser.add_argument("--api-timeout", type=float, default=30.0)
 
     vast_live_parser = subparsers.add_parser(
         "vast-live",
@@ -56,6 +57,7 @@ def build_parser() -> argparse.ArgumentParser:
     vast_live_parser.add_argument("--checkpoint", required=True)
     vast_live_parser.add_argument("--host", default="127.0.0.1")
     vast_live_parser.add_argument("--port", type=int, default=22081)
+    vast_live_parser.add_argument("--api-timeout", type=float, default=30.0)
     vast_live_parser.add_argument("--poll-interval", type=float, default=0.1)
     vast_live_parser.add_argument("--crop-size", type=int, default=512)
     vast_live_parser.add_argument("--threshold", type=float, default=0.5)
@@ -67,6 +69,8 @@ def build_parser() -> argparse.ArgumentParser:
     vast_live_parser.add_argument("--feedback-key", default="I", help="Hold this key while clicking corrected masks to capture feedback")
     vast_live_parser.add_argument("--feedback-dir", default="data\\feedback_vast")
     vast_live_parser.add_argument("--disable-online-learning", action="store_true")
+    vast_live_parser.add_argument("--debug-timings", action="store_true", help="Record per-stage timings for live bridge clicks")
+    vast_live_parser.add_argument("--save-click-artifacts", action="store_true", help="Save crop/mask/overlay files for each live click")
     vast_live_parser.add_argument("--online-output-dir", default="runs\\live_feedback")
     vast_live_parser.add_argument("--online-epochs", type=int, default=1)
     vast_live_parser.add_argument("--online-learning-rate", type=float, default=1e-4)
@@ -216,7 +220,7 @@ def main() -> None:
         from pointnclick_segmentation.vast_client import VastClient
 
         try:
-            with VastClient(host=args.host, port=args.port) as client:
+            with VastClient(host=args.host, port=args.port, timeout_s=args.api_timeout) as client:
                 info = client.get_info()
                 client.set_api_layers_enabled(True)
                 selected_layer, selected_em_layer, selected_seg_layer = client.get_selected_layer_info()
@@ -250,6 +254,7 @@ def main() -> None:
             checkpoint_path=args.checkpoint,
             host=args.host,
             port=args.port,
+            api_timeout_s=args.api_timeout,
             poll_interval_s=args.poll_interval,
             crop_size=args.crop_size,
             threshold=args.threshold,
@@ -261,6 +266,8 @@ def main() -> None:
             feedback_capture_key=args.feedback_key,
             feedback_dir=args.feedback_dir,
             online_learning=not args.disable_online_learning,
+            debug_timings=args.debug_timings,
+            save_click_artifacts=args.save_click_artifacts,
             online_learning_output_dir=args.online_output_dir,
             online_learning_epochs=args.online_epochs,
             online_learning_rate=args.online_learning_rate,
