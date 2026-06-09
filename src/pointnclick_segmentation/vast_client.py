@@ -152,8 +152,21 @@ class VastClient:
         maxy: int,
         minz: int,
         maxz: int,
+        immediate_flag: bool = False,
+        request_load_flag: bool = True,
     ) -> np.ndarray:
-        response = self._fetch_em_image_response(layer_nr, miplevel, minx, maxx, miny, maxy, minz, maxz)
+        response = self._fetch_em_image_response(
+            layer_nr,
+            miplevel,
+            minx,
+            maxx,
+            miny,
+            maxy,
+            minz,
+            maxz,
+            immediate_flag=immediate_flag,
+            request_load_flag=request_load_flag,
+        )
         width = maxx - minx + 1
         height = maxy - miny + 1
         depth = maxz - minz + 1
@@ -176,22 +189,28 @@ class VastClient:
         maxy: int,
         minz: int,
         maxz: int,
+        immediate_flag: bool = False,
+        request_load_flag: bool = True,
     ) -> VastResponse:
         candidate_layers = [layer_nr]
         if layer_nr >= 0:
             candidate_layers.append(layer_nr + 1)
         last_exc: VastProtocolError | None = None
         for candidate_layer in candidate_layers:
-            payload = self._encode_uint32_values([candidate_layer, miplevel, minx, maxx, miny, maxy, minz, maxz])
+            payload_values = [candidate_layer, miplevel, minx, maxx, miny, maxy, minz, maxz]
+            if immediate_flag or not request_load_flag:
+                payload_values.extend([1 if immediate_flag else 0, 1 if request_load_flag else 0])
+            payload = self._encode_uint32_values(payload_values)
             try:
                 return self._send_message(self.GETEMIMAGERAW, payload)
             except VastProtocolError as exc:
                 last_exc = exc
                 if exc.error_code != 3:
                     raise
-                immediate_payload = self._encode_uint32_values(
-                    [candidate_layer, miplevel, minx, maxx, miny, maxy, minz, maxz, 1]
-                )
+                immediate_payload_values = [candidate_layer, miplevel, minx, maxx, miny, maxy, minz, maxz, 1]
+                if not request_load_flag:
+                    immediate_payload_values.append(0)
+                immediate_payload = self._encode_uint32_values(immediate_payload_values)
                 try:
                     return self._send_message(self.GETEMIMAGERAWIMMEDIATE, immediate_payload)
                 except VastProtocolError as exc_immediate:

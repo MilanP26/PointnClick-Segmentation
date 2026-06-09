@@ -49,6 +49,7 @@ class LoadedPredictor:
         self,
         checkpoint_path: str | Path,
         image_size: int | None = None,
+        crop_size: int | None = None,
         device_name: str = "cuda",
     ) -> None:
         self.checkpoint_path = str(checkpoint_path)
@@ -56,7 +57,7 @@ class LoadedPredictor:
         checkpoint = torch.load(self.checkpoint_path, map_location=self.device, weights_only=False)
         self.train_config = checkpoint.get("config", {})
         self.model_image_size = image_size or int(self.train_config.get("image_size", 512))
-        self.crop_size = int(self.train_config.get("crop_size") or self.model_image_size)
+        self.crop_size = int(crop_size or self.train_config.get("crop_size") or self.model_image_size)
         self.use_autocast = self.device.type == "cuda"
         if self.use_autocast:
             torch.backends.cudnn.benchmark = True
@@ -128,10 +129,16 @@ def predict_mask_from_array(
     x: int,
     y: int,
     image_size: int | None = None,
+    crop_size: int | None = None,
     threshold: float = 0.5,
     device_name: str = "cuda",
 ) -> np.ndarray:
-    predictor = LoadedPredictor(checkpoint_path=checkpoint_path, image_size=image_size, device_name=device_name)
+    predictor = LoadedPredictor(
+        checkpoint_path=checkpoint_path,
+        image_size=image_size,
+        crop_size=crop_size,
+        device_name=device_name,
+    )
     return predictor.predict(image=image, x=x, y=y, threshold=threshold)
 
 

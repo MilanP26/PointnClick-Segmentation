@@ -39,6 +39,8 @@ class VastLiveConfig:
     online_learning_rate: float = 1e-4
     debug_timings: bool = False
     save_click_artifacts: bool = False
+    auto_em_immediate: bool = False
+    auto_em_request_load: bool = True
 
 
 class TimingRecorder:
@@ -49,8 +51,16 @@ class TimingRecorder:
         self.records: list[dict[str, object]] = []
 
     @staticmethod
+    def _stage_pairs(timings_ms: dict[str, float]) -> list[tuple[str, float]]:
+        return [
+            (key, value)
+            for key, value in timings_ms.items()
+            if value >= 0.0 and not key.endswith("_total") and key != "em_fetch_mode"
+        ]
+
+    @staticmethod
     def _bottleneck(timings_ms: dict[str, float]) -> tuple[str, float] | None:
-        positive = [(key, value) for key, value in timings_ms.items() if value >= 0.0]
+        positive = TimingRecorder._stage_pairs(timings_ms)
         if not positive:
             return None
         return max(positive, key=lambda item: item[1])
@@ -92,7 +102,12 @@ class TimingRecorder:
             stage: stage_totals[stage] / max(stage_counts[stage], 1)
             for stage in sorted(stage_totals)
         }
-        dominant_stage = max(average_timings_ms.items(), key=lambda item: item[1])
+        stage_average_timings_ms = {
+            stage: value
+            for stage, value in average_timings_ms.items()
+            if not stage.endswith("_total") and stage != "em_fetch_mode"
+        }
+        dominant_stage = max(stage_average_timings_ms.items(), key=lambda item: item[1])
         summary = {
             "num_records": len(self.records),
             "average_timings_ms": average_timings_ms,
@@ -111,6 +126,7 @@ def run_vast_live_bridge(config: VastLiveConfig) -> None:
     predictor = LoadedPredictor(
         checkpoint_path=config.checkpoint_path,
         image_size=config.image_size,
+        crop_size=config.crop_size,
         device_name=config.device_name,
     )
     predictor_load_ms = (time.perf_counter() - startup_t0) * 1000.0
@@ -149,6 +165,10 @@ def run_vast_live_bridge(config: VastLiveConfig) -> None:
                 f"Watching for clicks. Hold {config.auto_segment_key.upper()} while clicking to auto-segment. "
                 f"Hold {config.feedback_capture_key.upper()} while clicking corrected masks to capture feedback."
             )
+            if config.auto_em_immediate and not config.auto_em_request_load:
+                print("Auto-segmentation is using fail-fast EM fetches: uncached regions will be skipped instead of blocking.")
+            else:
+                print("Auto-segmentation is using blocking EM fetches and may wait for VAST to load uncached regions.")
             last_signature: tuple[int, int, int, int] | None = None
             prev_lbuttondown = 0
             armed_mode: str | None = None
@@ -321,16 +341,44 @@ def _process_click(
     height = maxy - miny + 1
 
     em_t0 = time.perf_counter()
-    em_image = client.get_em_image(
-        layer_nr=em_layer_nr,
-        miplevel=0,
-        minx=minx,
-        maxx=maxx,
-        miny=miny,
-        maxy=maxy,
-        minz=click_z,
-        maxz=click_z,
-    )
+    try:
+        em_image = client.get_em_image(
+            layer_nr=em_layer_nr,
+            miplevel=0,
+            minx=minx,
+            maxx=maxx,
+            miny=miny,
+            maxy=maxy,
+            minz=click_z,
+            maxz=click_z,
+            immediate_flag=config.auto_em_immediate,
+            request_load_flag=config.auto_em_request_load,
+        )
+    except VastProtocolError as exc:
+        timings_ms["get_em_image"] = (time.perf_counter() - em_t0) * 1000.0
+        timings_ms["click_total"] = (time.perf_counter() - click_t0) * 1000.0
+        metadata = {
+            "selected_segment": int(selected_segment),
+            "uimode": int(state["uimode"]),
+            "global_click_xyz": [click_x, click_y, click_z],
+            "crop_bounds_xyz": [minx, maxx, miny, maxy, click_z, click_z],
+            "crop_shape_hw": [height, width],
+            "em_immediate": config.auto_em_immediate,
+            "em_request_load": config.auto_em_request_load,
+            "error_code": exc.error_code,
+            "error_message": str(exc),
+        }
+        if timing_recorder is not None:
+            timing_recorder.record(
+                event_type="auto_click_skipped",
+                timings_ms=timings_ms,
+                metadata=metadata,
+            )
+        print(
+            "Skipped auto-segmentation because VAST does not have the EM crop ready yet. "
+            "Pan or wait a moment, then click again."
+        )
+        return
     timings_ms["get_em_image"] = (time.perf_counter() - em_t0) * 1000.0
     select_seg_read_t0 = time.perf_counter()
     client.set_selected_api_layer_nr(seg_layer_nr)

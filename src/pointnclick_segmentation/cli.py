@@ -71,9 +71,37 @@ def build_parser() -> argparse.ArgumentParser:
     vast_live_parser.add_argument("--disable-online-learning", action="store_true")
     vast_live_parser.add_argument("--debug-timings", action="store_true", help="Record per-stage timings for live bridge clicks")
     vast_live_parser.add_argument("--save-click-artifacts", action="store_true", help="Save crop/mask/overlay files for each live click")
+    vast_live_parser.set_defaults(em_immediate=False, em_request_load=True)
+    vast_live_parser.add_argument("--em-immediate", dest="em_immediate", action="store_true", help="Use VAST immediate EM fetches for auto-segmentation")
+    vast_live_parser.add_argument("--disable-em-immediate", dest="em_immediate", action="store_false", help="Use the older blocking EM fetch path for auto-segmentation")
+    vast_live_parser.add_argument("--allow-em-request-load", dest="em_request_load", action="store_true", help="Let VAST block to load uncached EM regions for auto-segmentation")
+    vast_live_parser.add_argument("--disable-em-request-load", dest="em_request_load", action="store_false", help="Skip uncached VAST EM regions instead of waiting for them to load")
     vast_live_parser.add_argument("--online-output-dir", default="runs\\live_feedback")
     vast_live_parser.add_argument("--online-epochs", type=int, default=1)
     vast_live_parser.add_argument("--online-learning-rate", type=float, default=1e-4)
+
+    webknossos_parser = subparsers.add_parser(
+        "webknossos-serve",
+        help="Run a local PointnClick bridge for painting predictions into WebKnossos volume annotations",
+    )
+    webknossos_parser.add_argument("--checkpoint", required=True)
+    webknossos_parser.add_argument("--dataset", required=True, help="WebKnossos dataset name or dataset view URL")
+    webknossos_parser.add_argument("--organization-id", help="Organization id, needed when --dataset is a name")
+    webknossos_parser.add_argument("--annotation", help="Optional annotation id or URL for streaming annotation-linked data")
+    webknossos_parser.add_argument("--sharing-token", help="Optional dataset sharing token")
+    webknossos_parser.add_argument("--webknossos-url", default="https://webknossos.org")
+    webknossos_parser.add_argument("--token", help="WebKnossos auth token. Defaults to WEBKNOSSOS_TOKEN if omitted")
+    webknossos_parser.add_argument("--color-layer", default="color", help="Raw EM/image layer name in WebKnossos")
+    webknossos_parser.add_argument("--mag", default="1", help="Magnification to read, usually 1")
+    webknossos_parser.add_argument("--host", default="127.0.0.1")
+    webknossos_parser.add_argument("--port", type=int, default=8765)
+    webknossos_parser.add_argument("--crop-size", type=int, default=512)
+    webknossos_parser.add_argument("--threshold", type=float, default=0.5)
+    webknossos_parser.add_argument("--image-size", type=int)
+    webknossos_parser.add_argument("--device", default="cuda")
+    webknossos_parser.add_argument("--timeout", type=int, default=120, help="WebKnossos network timeout in seconds")
+    webknossos_parser.add_argument("--output-dir", default="outputs\\webknossos_bridge")
+    webknossos_parser.add_argument("--client-key", default="p", help="Keyboard shortcut used inside WebKnossos")
 
     feedback_parser = subparsers.add_parser("add-feedback", help="Add a corrected sample for future fine-tuning")
     feedback_parser.add_argument("--image", required=True)
@@ -268,6 +296,8 @@ def main() -> None:
             online_learning=not args.disable_online_learning,
             debug_timings=args.debug_timings,
             save_click_artifacts=args.save_click_artifacts,
+            auto_em_immediate=args.em_immediate,
+            auto_em_request_load=args.em_request_load,
             online_learning_output_dir=args.online_output_dir,
             online_learning_epochs=args.online_epochs,
             online_learning_rate=args.online_learning_rate,
@@ -279,6 +309,32 @@ def main() -> None:
                 "VAST live bridge failed. Make sure VAST Lite is running, "
                 "Window > Remote Control API Server is enabled, and the selected segment/layers are valid."
             ) from exc
+        return
+
+    if args.command == "webknossos-serve":
+        from pointnclick_segmentation.webknossos_bridge import WebKnossosBridgeConfig, run_webknossos_bridge
+
+        config = WebKnossosBridgeConfig(
+            checkpoint_path=args.checkpoint,
+            dataset=args.dataset,
+            organization_id=args.organization_id,
+            annotation=args.annotation,
+            sharing_token=args.sharing_token,
+            webknossos_url=args.webknossos_url,
+            token=args.token,
+            color_layer=args.color_layer,
+            mag=args.mag,
+            host=args.host,
+            port=args.port,
+            crop_size=args.crop_size,
+            threshold=args.threshold,
+            image_size=args.image_size,
+            device_name=args.device,
+            timeout_s=args.timeout,
+            output_dir=args.output_dir,
+            client_key=args.client_key,
+        )
+        run_webknossos_bridge(config)
         return
 
     if args.command == "add-feedback":
