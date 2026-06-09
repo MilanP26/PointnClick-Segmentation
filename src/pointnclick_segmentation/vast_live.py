@@ -33,7 +33,7 @@ class VastLiveConfig:
     auto_segment_key: str = "P"
     feedback_capture_key: str = "I"
     feedback_dir: str = "data\\feedback_vast"
-    online_learning: bool = True
+    online_learning: bool = False
     online_learning_output_dir: str = "runs\\live_feedback"
     online_learning_epochs: int = 1
     online_learning_rate: float = 1e-4

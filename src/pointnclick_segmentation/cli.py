@@ -68,7 +68,9 @@ def build_parser() -> argparse.ArgumentParser:
     vast_live_parser.add_argument("--auto-key", default="P", help="Hold this key while clicking to trigger auto-segmentation")
     vast_live_parser.add_argument("--feedback-key", default="I", help="Hold this key while clicking corrected masks to capture feedback")
     vast_live_parser.add_argument("--feedback-dir", default="data\\feedback_vast")
-    vast_live_parser.add_argument("--disable-online-learning", action="store_true")
+    vast_live_parser.set_defaults(online_learning=False)
+    vast_live_parser.add_argument("--enable-online-learning", dest="online_learning", action="store_true")
+    vast_live_parser.add_argument("--disable-online-learning", dest="online_learning", action="store_false")
     vast_live_parser.add_argument("--debug-timings", action="store_true", help="Record per-stage timings for live bridge clicks")
     vast_live_parser.add_argument("--save-click-artifacts", action="store_true", help="Save crop/mask/overlay files for each live click")
     vast_live_parser.set_defaults(em_immediate=False, em_request_load=True)
@@ -293,7 +295,7 @@ def main() -> None:
             auto_segment_key=args.auto_key,
             feedback_capture_key=args.feedback_key,
             feedback_dir=args.feedback_dir,
-            online_learning=not args.disable_online_learning,
+            online_learning=args.online_learning,
             debug_timings=args.debug_timings,
             save_click_artifacts=args.save_click_artifacts,
             auto_em_immediate=args.em_immediate,
