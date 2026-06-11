@@ -6,7 +6,6 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
-import torch
 
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".tif", ".tiff"}
@@ -19,13 +18,17 @@ def ensure_dir(path: str | Path) -> Path:
 
 
 def set_seed(seed: int) -> None:
+    import torch
+
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
 
 
-def resolve_device(device_name: str) -> torch.device:
+def resolve_device(device_name: str):
+    import torch
+
     if device_name == "cuda" and torch.cuda.is_available():
         return torch.device("cuda")
     return torch.device("cpu")

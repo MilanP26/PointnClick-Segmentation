@@ -2,6 +2,14 @@
 
 This keeps the VAST bridge unchanged and runs a separate local bridge for WebKnossos. Python reads the EM crop from WebKnossos, runs the same trained model checkpoint, and the browser script paints the prediction into the active WebKnossos volume segment.
 
+Recommended user-facing flow: run the desktop bridge app, load the Chrome extension, select the active WebKnossos segment/color, then press the extension shortcut at the crosshair. The prediction is painted as normal WebKnossos volume annotation, so brush and eraser correction still work. See `docs/webknossos_bridge_app.md` for the app, extension, packaging, and model-weight release workflow.
+
+Developer shortcut:
+
+```powershell
+python run_cli.py webknossos-app
+```
+
 ## 1. Start Anaconda and enter the project
 
 ```powershell

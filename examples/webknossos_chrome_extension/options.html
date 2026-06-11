@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PointnClick Options</title>
+    <link rel="stylesheet" href="extension.css">
+  </head>
+  <body class="options-body">
+    <main class="panel options-wrap">
+      <h1 class="title">PointnClick Options</h1>
+      <p class="subtitle">These settings control the browser extension only. WebKnossos token, dataset, and model settings live in the local bridge app.</p>
+
+      <div class="row">
+        <label for="bridge-url">Bridge URL</label>
+        <input id="bridge-url" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="row">
+        <label for="shortcut-key">Shortcut key</label>
+        <input id="shortcut-key" maxlength="1" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="row">
+        <label for="chunk-size">Paint chunk size</label>
+        <input id="chunk-size" type="number" min="100" step="100">
+      </div>
+
+      <div class="row">
+        <label for="timeout-ms">Request timeout ms</label>
+        <input id="timeout-ms" type="number" min="1000" step="1000">
+      </div>
+
+      <div class="actions">
+        <button id="save">Save</button>
+        <button id="test" class="secondary">Test bridge</button>
+      </div>
+
+      <div id="status" class="status">Loading settings...</div>
+      <p class="hint">After changing the shortcut, refresh the WebKnossos tab or run window.pointnclickWebknossos.refreshConfig() in its console.</p>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

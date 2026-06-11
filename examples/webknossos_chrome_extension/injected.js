@@ -1,17 +1,27 @@
 (() => {
   const PAGE_WINDOW = window;
-  const KEY = "p";
-  const CHUNK_SIZE = 5000;
+  if (PAGE_WINDOW.__pointnclickWebknossosInjected) return;
+  PAGE_WINDOW.__pointnclickWebknossosInjected = true;
+
+  const DEFAULT_CONFIG = {
+    bridgeUrl: "http://127.0.0.1:8765",
+    shortcutKey: "p",
+    chunkSize: 5000,
+    timeoutMs: 120000,
+  };
   const MAX_API_WAIT_MS = 120000;
   const API_POLL_MS = 1000;
+
+  let config = {...DEFAULT_CONFIG};
   let busy = false;
   let nextRequestId = 1;
   const pendingRequests = new Map();
 
   PAGE_WINDOW.pointnclickWebknossosStatus = {
     loaded: false,
-    message: "PointnClick Chrome extension injected; waiting for WebKnossos API.",
-    bridgeUrl: "http://127.0.0.1:8765",
+    message: "PointnClick extension injected; loading configuration.",
+    bridgeUrl: config.bridgeUrl,
+    shortcutKey: config.shortcutKey,
     startedAt: new Date().toISOString(),
   };
 
@@ -26,10 +36,11 @@
   function expandRuns(runs, z) {
     const chunks = [];
     let chunk = [];
+    const chunkSize = Math.max(1, Number(config.chunkSize || DEFAULT_CONFIG.chunkSize));
     for (const [y, x0, x1] of runs) {
       for (let x = x0; x < x1; x += 1) {
         chunk.push([x, y, z]);
-        if (chunk.length >= CHUNK_SIZE) {
+        if (chunk.length >= chunkSize) {
           chunks.push(chunk);
           chunk = [];
         }
@@ -44,6 +55,54 @@
     if (PAGE_WINDOW.parent && PAGE_WINDOW.parent.webknossos && PAGE_WINDOW.parent.webknossos.apiReady) return PAGE_WINDOW.parent.webknossos;
     if (PAGE_WINDOW.opener && PAGE_WINDOW.opener.webknossos && PAGE_WINDOW.opener.webknossos.apiReady) return PAGE_WINDOW.opener.webknossos;
     return null;
+  }
+
+  function requestExtension(action, payload = null, timeoutMs = 15000) {
+    const requestId = nextRequestId++;
+    return new Promise((resolve, reject) => {
+      pendingRequests.set(requestId, {resolve, reject});
+      PAGE_WINDOW.postMessage(
+        {
+          type: "POINTNCLICK_EXTENSION_REQUEST",
+          requestId,
+          action,
+          payload,
+        },
+        "*",
+      );
+      setTimeout(() => {
+        if (!pendingRequests.has(requestId)) return;
+        pendingRequests.delete(requestId);
+        reject(new Error("PointnClick extension request timed out."));
+      }, timeoutMs);
+    });
+  }
+
+  PAGE_WINDOW.addEventListener("message", (event) => {
+    if (event.source !== PAGE_WINDOW) return;
+    const message = event.data;
+    if (!message || message.type !== "POINTNCLICK_EXTENSION_RESPONSE") return;
+    const pending = pendingRequests.get(message.requestId);
+    if (!pending) return;
+    pendingRequests.delete(message.requestId);
+    if (!message.response) {
+      pending.reject(new Error("PointnClick extension returned no response."));
+      return;
+    }
+    pending.resolve(message.response);
+  });
+
+  async function loadConfig() {
+    const response = await requestExtension("POINTNCLICK_GET_CONFIG");
+    if (!response.ok) {
+      const message = response.data && response.data.message ? response.data.message : "Could not load PointnClick extension settings.";
+      throw new Error(message);
+    }
+    config = {...DEFAULT_CONFIG, ...response.data};
+    PAGE_WINDOW.pointnclickWebknossosStatus.bridgeUrl = config.bridgeUrl;
+    PAGE_WINDOW.pointnclickWebknossosStatus.shortcutKey = config.shortcutKey;
+    PAGE_WINDOW.pointnclickWebknossosStatus.message = "Configuration loaded; waiting for WebKnossos API.";
+    return config;
   }
 
   function waitForWebKnossosApi() {
@@ -67,48 +126,12 @@
     });
   }
 
-  function postToBridge(payload) {
-    const requestId = nextRequestId++;
-    return new Promise((resolve, reject) => {
-      pendingRequests.set(requestId, {resolve, reject});
-      PAGE_WINDOW.postMessage(
-        {
-          type: "POINTNCLICK_PREDICT_REQUEST",
-          requestId,
-          payload,
-        },
-        "*",
-      );
-      setTimeout(() => {
-        if (!pendingRequests.has(requestId)) return;
-        pendingRequests.delete(requestId);
-        reject(new Error("PointnClick bridge request timed out."));
-      }, 120000);
-    });
-  }
-
-  PAGE_WINDOW.addEventListener("message", (event) => {
-    if (event.source !== PAGE_WINDOW) return;
-    const message = event.data;
-    if (!message || message.type !== "POINTNCLICK_PREDICT_RESPONSE") return;
-    const pending = pendingRequests.get(message.requestId);
-    if (!pending) return;
-    pendingRequests.delete(message.requestId);
-    if (!message.response || !message.response.ok) {
-      const errorMessage = message.response && message.response.data
-        ? message.response.data.message
-        : "PointnClick bridge request failed.";
-      pending.reject(new Error(errorMessage));
-      return;
-    }
-    pending.resolve(message.response.data);
-  });
-
   function installKeyHandler(api) {
     if (PAGE_WINDOW.pointnclickWebknossosStatus.keyHandlerInstalled) return;
     PAGE_WINDOW.pointnclickWebknossosStatus.keyHandlerInstalled = true;
     document.addEventListener("keydown", (event) => {
-      if (event.key.toLowerCase() !== KEY) return;
+      const key = String(config.shortcutKey || DEFAULT_CONFIG.shortcutKey).toLowerCase();
+      if (event.key.toLowerCase() !== key) return;
       if (event.ctrlKey || event.metaKey || event.altKey) return;
       if (event.repeat) return;
       event.preventDefault();
@@ -130,11 +153,22 @@
         throw new Error("Select/create an active segment first.");
       }
       toast(api, "info", `PointnClick seed at ${position.join(", ")}`, 2500);
-      const result = await postToBridge({
-        position,
-        segment_id: segmentId,
-        volume_layer_name: api.data.getVolumeTracingLayerName ? api.data.getVolumeTracingLayerName() : null,
-      });
+      const response = await requestExtension(
+        "POINTNCLICK_PREDICT",
+        {
+          position,
+          segment_id: segmentId,
+          volume_layer_name: api.data.getVolumeTracingLayerName ? api.data.getVolumeTracingLayerName() : null,
+        },
+        Number(config.timeoutMs || DEFAULT_CONFIG.timeoutMs),
+      );
+      if (!response.ok) {
+        const errorMessage = response.data && response.data.message
+          ? response.data.message
+          : `Bridge returned HTTP ${response.status || 0}`;
+        throw new Error(errorMessage);
+      }
+      const result = response.data;
       if (result.status !== "ok") {
         throw new Error(result.message || "Bridge returned an error.");
       }
@@ -142,7 +176,7 @@
       for (const voxels of chunks) {
         api.data.labelVoxels(voxels, result.segment_id);
       }
-      toast(api, "success", `Painted ${result.num_pixels} voxels in ${Math.round(result.timings_ms.request_total)} ms.`);
+      toast(api, "success", `Painted ${result.num_pixels} voxels into segment ${result.segment_id} in ${Math.round(result.timings_ms.request_total)} ms.`);
     } catch (error) {
       console.error("[PointnClick]", error);
       toast(api, "error", error.message || String(error), 8000);
@@ -151,14 +185,26 @@
     }
   }
 
-  waitForWebKnossosApi().then((webknossosHost) => webknossosHost.apiReady(3)).then((api) => {
+  async function initialize() {
+    await loadConfig();
+    const webknossosHost = await waitForWebKnossosApi();
+    const api = await webknossosHost.apiReady(3);
     installKeyHandler(api);
-    PAGE_WINDOW.pointnclickWebknossos = {run: () => run(api), bridgeUrl: "http://127.0.0.1:8765"};
+    PAGE_WINDOW.pointnclickWebknossos = {
+      run: () => run(api),
+      refreshConfig: async () => {
+        await loadConfig();
+        toast(api, "success", `PointnClick settings refreshed. Shortcut: ${config.shortcutKey.toUpperCase()}.`);
+      },
+      getConfig: () => ({...config}),
+    };
     PAGE_WINDOW.pointnclickWebknossosStatus.loaded = true;
     PAGE_WINDOW.pointnclickWebknossosStatus.message = "PointnClick ready.";
     PAGE_WINDOW.pointnclickWebknossosStatus.readyAt = new Date().toISOString();
-    toast(api, "success", `PointnClick ready. Press ${KEY.toUpperCase()} at the crosshair to segment.`);
-  }).catch((error) => {
+    toast(api, "success", `PointnClick ready. Press ${config.shortcutKey.toUpperCase()} at the crosshair to segment.`);
+  }
+
+  initialize().catch((error) => {
     PAGE_WINDOW.pointnclickWebknossosStatus.loaded = false;
     PAGE_WINDOW.pointnclickWebknossosStatus.error = error.message || String(error);
     console.error("[PointnClick]", error);

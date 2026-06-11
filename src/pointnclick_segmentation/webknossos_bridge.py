@@ -12,7 +12,6 @@ from urllib.parse import urlparse
 
 import numpy as np
 
-from pointnclick_segmentation.infer import LoadedPredictor
 from pointnclick_segmentation.utils import ensure_dir
 
 
@@ -61,6 +60,8 @@ class WebKnossosBridge:
                 timeout=config.timeout_s,
             )
             self.context.__enter__()
+        from pointnclick_segmentation.infer import LoadedPredictor
+
         self.predictor = LoadedPredictor(
             checkpoint_path=config.checkpoint_path,
             image_size=config.image_size,
@@ -447,35 +448,6 @@ def build_client_script(bridge_url: str, key: str = "p", userscript: bool = Fals
 // ==/UserScript==
 """
 
-
-def build_diagnostic_userscript() -> str:
-    return """// ==UserScript==
-// @name         PointnClick Tampermonkey Diagnostic
-// @namespace    pointnclick-segmentation
-// @version      0.1
-// @description  Confirms whether Tampermonkey can inject scripts into the current page.
-// @match        *://*/*
-// @grant        unsafeWindow
-// @run-at       document-start
-// ==/UserScript==
-(function () {
-  const pageWindow = typeof unsafeWindow !== "undefined" ? unsafeWindow : window;
-  pageWindow.pointnclickTampermonkeyDiagnostic = {
-    loaded: true,
-    href: pageWindow.location.href,
-    loadedAt: new Date().toISOString(),
-    message: "Tampermonkey diagnostic script executed.",
-  };
-  console.log("[PointnClick Diagnostic] Tampermonkey diagnostic script executed.", pageWindow.pointnclickTampermonkeyDiagnostic);
-  setTimeout(() => {
-    try {
-      pageWindow.alert("PointnClick Tampermonkey diagnostic loaded on this page.");
-    } catch (error) {
-      console.log("[PointnClick Diagnostic] Alert failed:", error);
-    }
-  }, 1000);
-})();
-"""
     return metadata + f"""(() => {{
   const PAGE_WINDOW = typeof unsafeWindow !== "undefined" ? unsafeWindow : window;
   const BRIDGE_URL = {json.dumps(bridge_url)};
@@ -636,4 +608,34 @@ def build_diagnostic_userscript() -> str:
     console.error("[PointnClick]", error);
   }});
 }})();
+"""
+
+
+def build_diagnostic_userscript() -> str:
+    return """// ==UserScript==
+// @name         PointnClick Tampermonkey Diagnostic
+// @namespace    pointnclick-segmentation
+// @version      0.1
+// @description  Confirms whether Tampermonkey can inject scripts into the current page.
+// @match        *://*/*
+// @grant        unsafeWindow
+// @run-at       document-start
+// ==/UserScript==
+(function () {
+  const pageWindow = typeof unsafeWindow !== "undefined" ? unsafeWindow : window;
+  pageWindow.pointnclickTampermonkeyDiagnostic = {
+    loaded: true,
+    href: pageWindow.location.href,
+    loadedAt: new Date().toISOString(),
+    message: "Tampermonkey diagnostic script executed.",
+  };
+  console.log("[PointnClick Diagnostic] Tampermonkey diagnostic script executed.", pageWindow.pointnclickTampermonkeyDiagnostic);
+  setTimeout(() => {
+    try {
+      pageWindow.alert("PointnClick Tampermonkey diagnostic loaded on this page.");
+    } catch (error) {
+      console.log("[PointnClick Diagnostic] Alert failed:", error);
+    }
+  }, 1000);
+})();
 """

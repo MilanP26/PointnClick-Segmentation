@@ -7,19 +7,29 @@
   window.addEventListener("message", (event) => {
     if (event.source !== window) return;
     const message = event.data;
-    if (!message || message.type !== "POINTNCLICK_PREDICT_REQUEST") return;
+    if (!message || message.type !== "POINTNCLICK_EXTENSION_REQUEST") return;
 
     chrome.runtime.sendMessage(
       {
-        type: "POINTNCLICK_PREDICT",
+        type: message.action,
         payload: message.payload,
       },
       (response) => {
+        const runtimeError = chrome.runtime.lastError;
         window.postMessage(
           {
-            type: "POINTNCLICK_PREDICT_RESPONSE",
+            type: "POINTNCLICK_EXTENSION_RESPONSE",
             requestId: message.requestId,
-            response,
+            response: runtimeError
+              ? {
+                  ok: false,
+                  status: 0,
+                  data: {
+                    status: "error",
+                    message: runtimeError.message,
+                  },
+                }
+              : response,
           },
           "*",
         );

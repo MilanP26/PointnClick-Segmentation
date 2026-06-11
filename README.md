@@ -69,6 +69,18 @@ py -3 -m venv .venv
 
 Use `run_cli.py` from the repo root. You do not need `pip install -e .`.
 
+## Recommended WebKnossos app workflow
+
+For day-to-day WebKnossos annotation, use the two-part local workflow:
+
+1. Run the PointnClick Bridge desktop app or `python run_cli.py webknossos-app`.
+2. Load the Chrome extension from `examples\webknossos_chrome_extension`.
+3. In WebKnossos, select the segment/color you want, place the crosshair, and press the extension shortcut.
+
+The extension paints into the currently active WebKnossos segment, so normal brush and eraser corrections still work after each prediction.
+
+Model weights are intentionally not committed to git. Upload trained `.pt` files to GitHub Releases or another direct-download host, then paste that URL into the bridge app. See [docs/webknossos_bridge_app.md](docs/webknossos_bridge_app.md) for user install, `.exe` build, extension setup, and model-release instructions.
+
 ## Prepare bouton exports
 
 You already have:

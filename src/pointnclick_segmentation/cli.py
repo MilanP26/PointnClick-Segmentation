@@ -105,6 +105,11 @@ def build_parser() -> argparse.ArgumentParser:
     webknossos_parser.add_argument("--output-dir", default="outputs\\webknossos_bridge")
     webknossos_parser.add_argument("--client-key", default="p", help="Keyboard shortcut used inside WebKnossos")
 
+    subparsers.add_parser(
+        "webknossos-app",
+        help="Open the desktop app for the local WebKnossos bridge",
+    )
+
     feedback_parser = subparsers.add_parser("add-feedback", help="Add a corrected sample for future fine-tuning")
     feedback_parser.add_argument("--image", required=True)
     feedback_parser.add_argument("--mask", required=True)
@@ -337,6 +342,12 @@ def main() -> None:
             client_key=args.client_key,
         )
         run_webknossos_bridge(config)
+        return
+
+    if args.command == "webknossos-app":
+        from pointnclick_segmentation.bridge_app import main as bridge_app_main
+
+        bridge_app_main()
         return
 
     if args.command == "add-feedback":

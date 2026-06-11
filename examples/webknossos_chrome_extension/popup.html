@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PointnClick</title>
+    <link rel="stylesheet" href="extension.css">
+  </head>
+  <body>
+    <main class="panel">
+      <h1 class="title">PointnClick</h1>
+      <p class="subtitle">WebKnossos bridge client</p>
+
+      <div class="row">
+        <label for="bridge-url">Bridge URL</label>
+        <input id="bridge-url" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="row">
+        <label for="shortcut-key">Shortcut key</label>
+        <input id="shortcut-key" maxlength="1" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="actions">
+        <button id="save">Save</button>
+        <button id="test" class="secondary">Test</button>
+        <button id="options" class="secondary">Options</button>
+      </div>
+
+      <div id="status" class="status">Loading settings...</div>
+      <p class="hint">Select a WebKnossos segment/color, put the crosshair on the target, then press the shortcut.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

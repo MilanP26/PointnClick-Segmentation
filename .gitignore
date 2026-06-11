@@ -18,3 +18,7 @@ data/Training Round 2/
 data/*/em.zip
 data/*/mask.zip
 data/worm_*/
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.download
