@@ -3,7 +3,7 @@
   "name": "PointnClick WebKnossos Bridge",
   "version": "0.2.0",
   "description": "Connects WebKnossos annotations to the local PointnClick segmentation bridge.",
-  "permissions": ["storage"],
+  "permissions": ["storage", "activeTab"],
   "host_permissions": [
     "http://127.0.0.1/*",
     "http://localhost/*"

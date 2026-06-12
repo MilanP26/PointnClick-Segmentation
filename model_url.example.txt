@@ -1,0 +1,5 @@
+# Optional public model URL for packaged bridge releases.
+# Copy this file to model_url.txt and replace the URL after publishing your model as a GitHub Release asset.
+#
+# Example:
+# https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/v0.1.0/pointnclick-worm-unet-v1.pt

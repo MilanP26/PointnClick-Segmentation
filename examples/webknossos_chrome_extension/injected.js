@@ -14,6 +14,7 @@
 
   let config = {...DEFAULT_CONFIG};
   let busy = false;
+  let webknossosApi = null;
   let nextRequestId = 1;
   const pendingRequests = new Map();
 
@@ -90,6 +91,38 @@
       return;
     }
     pending.resolve(message.response);
+  });
+
+  PAGE_WINDOW.addEventListener("message", (event) => {
+    if (event.source !== PAGE_WINDOW) return;
+    const message = event.data;
+    if (!message || message.type !== "POINTNCLICK_PAGE_COMMAND") return;
+
+    handlePageCommand(message.action)
+      .then((response) => {
+        PAGE_WINDOW.postMessage(
+          {
+            type: "POINTNCLICK_PAGE_COMMAND_RESPONSE",
+            requestId: message.requestId,
+            response,
+          },
+          "*",
+        );
+      })
+      .catch((error) => {
+        PAGE_WINDOW.postMessage(
+          {
+            type: "POINTNCLICK_PAGE_COMMAND_RESPONSE",
+            requestId: message.requestId,
+            response: {
+              ok: false,
+              message: error.message || String(error),
+              status: {...PAGE_WINDOW.pointnclickWebknossosStatus},
+            },
+          },
+          "*",
+        );
+      });
   });
 
   async function loadConfig() {
@@ -185,10 +218,50 @@
     }
   }
 
+  async function handlePageCommand(action) {
+    if (action === "status") {
+      return {
+        ok: true,
+        status: {
+          ...PAGE_WINDOW.pointnclickWebknossosStatus,
+          hasApi: Boolean(webknossosApi),
+          busy,
+        },
+      };
+    }
+    if (action === "refreshConfig") {
+      await loadConfig();
+      return {
+        ok: true,
+        status: {
+          ...PAGE_WINDOW.pointnclickWebknossosStatus,
+          hasApi: Boolean(webknossosApi),
+          busy,
+        },
+      };
+    }
+    if (action === "run") {
+      if (!webknossosApi) {
+        throw new Error("PointnClick is injected, but the WebKnossos API is not ready yet.");
+      }
+      await run(webknossosApi);
+      return {
+        ok: true,
+        status: {
+          ...PAGE_WINDOW.pointnclickWebknossosStatus,
+          hasApi: Boolean(webknossosApi),
+          busy,
+        },
+      };
+    }
+    throw new Error(`Unknown PointnClick page command: ${action}`);
+  }
+
   async function initialize() {
     await loadConfig();
     const webknossosHost = await waitForWebKnossosApi();
     const api = await webknossosHost.apiReady(3);
+    webknossosApi = api;
     installKeyHandler(api);
     PAGE_WINDOW.pointnclickWebknossos = {
       run: () => run(api),

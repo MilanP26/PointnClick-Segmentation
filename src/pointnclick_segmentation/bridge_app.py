@@ -5,7 +5,7 @@ import os
 import queue
 import threading
 import traceback
-from dataclasses import asdict, dataclass, fields
+from dataclasses import asdict, dataclass, field, fields
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Callable
@@ -15,7 +15,9 @@ from pointnclick_segmentation.model_store import (
     default_app_dir,
     default_config_path,
     default_model_dir,
+    default_model_url,
     download_model,
+    filename_from_url,
 )
 
 if TYPE_CHECKING:
@@ -25,7 +27,7 @@ if TYPE_CHECKING:
 @dataclass
 class BridgeAppConfig:
     checkpoint_path: str = ""
-    checkpoint_url: str = ""
+    checkpoint_url: str = field(default_factory=default_model_url)
     checkpoint_sha256: str = ""
     dataset: str = ""
     organization_id: str = ""
@@ -428,7 +430,14 @@ class BridgeApp:
         if not config.checkpoint_url.strip():
             raise ValueError("Choose a model checkpoint or provide a model download URL.")
 
-        destination = checkpoint_path if checkpoint_path else default_model_dir() / DEFAULT_MODEL_FILENAME
+        return str(self._download_checkpoint_from_url(config))
+
+    def _download_checkpoint_from_url(self, config: BridgeAppConfig) -> Path:
+        if not config.checkpoint_url.strip():
+            raise ValueError("Model download URL is required.")
+
+        filename = filename_from_url(config.checkpoint_url.strip(), fallback=DEFAULT_MODEL_FILENAME)
+        destination = default_model_dir() / filename
         self._queue_event("log", {"message": f"Downloading model to {destination}..."})
 
         def progress(received: int, total: int | None) -> None:
@@ -445,8 +454,8 @@ class BridgeApp:
             progress_callback=progress,
         )
         self._queue_event("log", {"message": f"Downloaded model to {path}"})
-        self._queue_event("set_var", {"name": "checkpoint_path", "value": str(path)})
-        return str(path)
+        self._queue_event("model_downloaded", {"path": str(path)})
+        return path
 
     def _start_bridge(self) -> None:
         try:
@@ -491,7 +500,7 @@ class BridgeApp:
 
         def worker() -> None:
             try:
-                checkpoint = self._resolve_checkpoint_for_start(config)
+                checkpoint = self._download_checkpoint_from_url(config)
                 self._queue_event("status", {"message": "Model ready"})
                 self._queue_event("log", {"message": f"Model ready: {checkpoint}"})
             except Exception as exc:
@@ -520,6 +529,15 @@ class BridgeApp:
             name = str(payload.get("name", ""))
             if name in self.vars:
                 self.vars[name].set(str(payload.get("value", "")))
+        elif event_type == "model_downloaded":
+            path = str(payload.get("path", ""))
+            if path and "checkpoint_path" in self.vars:
+                self.vars["checkpoint_path"].set(path)
+                try:
+                    self.config = self._config_from_vars()
+                    self.config.save()
+                except Exception as exc:
+                    self._log(f"Downloaded model, but could not save settings: {exc}")
         elif event_type == "ready":
             url = str(payload.get("url", ""))
             self.status_var.set(f"Running at {url}")

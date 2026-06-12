@@ -24,3 +24,9 @@ py -3 -m PyInstaller `
   run_bridge_app.py
 
 Write-Host "Build complete: dist\$Name\$Name.exe"
+
+$ModelUrlFile = Join-Path $RepoRoot "model_url.txt"
+if (Test-Path -LiteralPath $ModelUrlFile) {
+  Copy-Item -LiteralPath $ModelUrlFile -Destination (Join-Path $RepoRoot "dist\$Name\model_url.txt") -Force
+  Write-Host "Copied model_url.txt into dist\$Name"
+}

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import os
+import sys
 from pathlib import Path
 from typing import Callable
 from urllib.parse import unquote, urlparse
@@ -24,6 +25,27 @@ def default_model_dir() -> Path:
 
 def default_config_path() -> Path:
     return default_app_dir() / "bridge_config.json"
+
+
+def default_model_url() -> str:
+    env_url = os.environ.get("POINTNCLICK_MODEL_URL", "").strip()
+    if env_url:
+        return env_url
+
+    candidates: list[Path] = []
+    if getattr(sys, "frozen", False):
+        candidates.append(Path(sys.executable).with_name("model_url.txt"))
+    candidates.append(Path.cwd() / "model_url.txt")
+    candidates.append(Path(__file__).resolve().parents[2] / "model_url.txt")
+
+    for path in candidates:
+        if not path.exists():
+            continue
+        for line in path.read_text(encoding="utf-8").splitlines():
+            stripped = line.strip()
+            if stripped and not stripped.startswith("#"):
+                return stripped
+    return ""
 
 
 def filename_from_url(url: str, fallback: str = DEFAULT_MODEL_FILENAME) -> str:

@@ -79,7 +79,7 @@ For day-to-day WebKnossos annotation, use the two-part local workflow:
 
 The extension paints into the currently active WebKnossos segment, so normal brush and eraser corrections still work after each prediction.
 
-Model weights are intentionally not committed to git. Upload trained `.pt` files to GitHub Releases or another direct-download host, then paste that URL into the bridge app. See [docs/webknossos_bridge_app.md](docs/webknossos_bridge_app.md) for user install, `.exe` build, extension setup, and model-release instructions.
+Model weights are intentionally not committed to git. Upload trained `.pt` files to GitHub Releases or another direct-download host, then paste that URL into the bridge app. See [docs/webknossos_bridge_app.md](docs/webknossos_bridge_app.md) for user install and [docs/public_release_checklist.md](docs/public_release_checklist.md) for the full public release flow.
 
 ## Prepare bouton exports
 

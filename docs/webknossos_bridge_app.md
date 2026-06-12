@@ -27,6 +27,8 @@ Fill in:
 - `Magnification`: usually `1`
 - `Device`: `cuda` if the user's machine has a working CUDA PyTorch build, otherwise `cpu`
 
+If `Model download URL` is filled, click `Download model`. The app downloads the checkpoint into the user's local PointnClick model cache and updates `Model checkpoint` automatically.
+
 Click `Start bridge`. The bridge should show:
 
 ```text
@@ -99,6 +101,8 @@ https://github.com/<owner>/<repo>/releases/download/<tag>/pointnclick-worm-unet-
 7. Paste the SHA256 into the app's optional checksum field.
 
 The app downloads the model into the user's local app-data cache and then starts the bridge from that local file.
+
+For public releases, you can place the release asset URL in a `model_url.txt` file beside `PointnClickBridge.exe`. The app reads that file on startup and pre-fills `Model download URL`, so users only need to click `Download model`. See [public_release_checklist.md](public_release_checklist.md).
 
 ## Developer Run From Source
 

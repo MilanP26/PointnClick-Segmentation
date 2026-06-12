@@ -10,6 +10,8 @@ const shortcutInput = document.getElementById("shortcut-key");
 const statusEl = document.getElementById("status");
 const saveButton = document.getElementById("save");
 const testButton = document.getElementById("test");
+const pageStatusButton = document.getElementById("page-status");
+const runButton = document.getElementById("run");
 const optionsButton = document.getElementById("options");
 
 function normalizeBridgeUrl(value) {
@@ -56,8 +58,51 @@ function testBridge() {
   });
 }
 
+function sendPageCommand(action) {
+  return new Promise((resolve) => {
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+      const tab = tabs && tabs[0];
+      if (!tab || !tab.id) {
+        resolve({ok: false, message: "No active tab found."});
+        return;
+      }
+      chrome.tabs.sendMessage(tab.id, {type: "POINTNCLICK_PAGE_COMMAND", action}, (response) => {
+        const runtimeError = chrome.runtime.lastError;
+        if (runtimeError) {
+          resolve({ok: false, message: runtimeError.message});
+          return;
+        }
+        resolve(response || {ok: false, message: "No response from the page script."});
+      });
+    });
+  });
+}
+
+async function checkPageStatus() {
+  setStatus("Checking current tab...");
+  const response = await sendPageCommand("status");
+  if (!response.ok) {
+    setStatus(`Page script not ready:\n${response.message}`);
+    return;
+  }
+  const status = response.status || {};
+  setStatus(`Page script: ${status.loaded ? "loaded" : "not loaded"}\nWebKnossos API: ${status.hasApi ? "ready" : "not ready"}\nShortcut: ${(status.shortcutKey || shortcutInput.value || "p").toUpperCase()}\nMessage: ${status.message || ""}`);
+}
+
+async function runOnCurrentTab() {
+  setStatus("Triggering PointnClick on current tab...");
+  const response = await sendPageCommand("run");
+  if (!response.ok) {
+    setStatus(`Run failed:\n${response.message}`);
+    return;
+  }
+  setStatus("Run command sent. Check WebKnossos for the painted segment or toast message.");
+}
+
 saveButton.addEventListener("click", saveSettings);
 testButton.addEventListener("click", testBridge);
+pageStatusButton.addEventListener("click", checkPageStatus);
+runButton.addEventListener("click", runOnCurrentTab);
 optionsButton.addEventListener("click", () => chrome.runtime.openOptionsPage());
 
 loadSettings();
