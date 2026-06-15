@@ -3,7 +3,10 @@ from __future__ import annotations
 import json
 import os
 import queue
+import socket
+import sys
 import threading
+import time
 import traceback
 from dataclasses import asdict, dataclass, field, fields
 from http.server import ThreadingHTTPServer
@@ -19,6 +22,36 @@ from pointnclick_segmentation.model_store import (
     download_model,
     filename_from_url,
 )
+
+
+def default_log_path() -> Path:
+    return default_app_dir() / "bridge_app.log"
+
+
+def append_log_file(message: str) -> None:
+    path = default_log_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(f"[{timestamp}] {message.rstrip()}\n")
+
+
+class LogFileStream:
+    def write(self, message: str) -> int:
+        if message and message.strip():
+            append_log_file(message)
+        return len(message)
+
+    def flush(self) -> None:
+        return
+
+
+def install_windowed_stdio_redirect() -> None:
+    stream = LogFileStream()
+    if sys.stdout is None:
+        sys.stdout = stream
+    if sys.stderr is None:
+        sys.stderr = stream
 
 if TYPE_CHECKING:
     from pointnclick_segmentation.webknossos_bridge import WebKnossosBridgeConfig
@@ -145,7 +178,7 @@ class LocalBridgeRuntime:
                 callback(
                     "error",
                     {
-                        "message": str(exc),
+                        "message": friendly_error_message(exc),
                         "traceback": traceback.format_exc(),
                     },
                 )
@@ -176,6 +209,106 @@ def _none_if_blank(value: str | None) -> str | None:
         return None
     stripped = value.strip()
     return stripped or None
+
+
+def friendly_error_message(exc: BaseException) -> str:
+    text = str(exc)
+    lowered = text.lower()
+    if isinstance(exc, OSError) and "address already in use" in lowered:
+        return "Port 8765 is already in use. Close the other PointnClick Bridge window, or change the port in Advanced settings."
+    if "could not open webknossos color layer" in lowered or "could not open webknossos layer" in lowered:
+        return text + "\n\nOpen Advanced settings and check Raw layer. Common values are color, em, image, or raw."
+    if "could not open magnification" in lowered:
+        return text + "\n\nOpen Advanced settings and check Magnification. Start with 1."
+    if "401" in lowered or "unauthorized" in lowered or "forbidden" in lowered or "403" in lowered:
+        return text + "\n\nCheck the WebKnossos token and dataset permissions."
+    if "checkpoint" in lowered and ("no such file" in lowered or "cannot find" in lowered or "does not exist" in lowered):
+        return text + "\n\nClick Download model, or choose a local best_model.pt file."
+    if "dynamic link library" in lowered or "c10.dll" in lowered or "torch_cuda" in lowered or "torch" in lowered and "failed" in lowered:
+        return text + "\n\nTorch failed to load inside the packaged app. Rebuild the bridge app on the CUDA/PyTorch environment that works on this machine, or use a machine with a compatible NVIDIA driver."
+    if "timed out" in lowered:
+        return text + "\n\nThe WebKnossos request timed out. Check internet/VPN access and confirm the dataset URL opens in the browser."
+    return text or repr(exc)
+
+
+def check_port_available(host: str, port: int) -> tuple[bool, str]:
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            sock.bind((host, port))
+        return True, f"Port {host}:{port} is available."
+    except OSError as exc:
+        return False, f"Port {host}:{port} is not available: {exc}"
+
+
+def build_diagnostics_report(config: BridgeAppConfig) -> list[str]:
+    lines: list[str] = []
+    lines.append("Diagnostics report")
+    lines.append(f"App data folder: {default_app_dir()}")
+    lines.append(f"Config file: {default_config_path()}")
+    lines.append(f"Log file: {default_log_path()}")
+    lines.append(f"Bridge URL: {config.bridge_url()}")
+
+    if config.dataset.strip():
+        lines.append("OK: Dataset/view URL is filled.")
+    else:
+        lines.append("FAIL: Dataset/view URL is empty.")
+
+    if config.token.strip() or os.environ.get("WEBKNOSSOS_TOKEN"):
+        lines.append("OK: WebKnossos token is present.")
+    else:
+        lines.append("WARN: WebKnossos token is empty. This only works for public/shared datasets.")
+
+    checkpoint_path = Path(config.checkpoint_path).expanduser() if config.checkpoint_path.strip() else None
+    if checkpoint_path and checkpoint_path.exists():
+        size_mb = checkpoint_path.stat().st_size / (1024 * 1024)
+        lines.append(f"OK: Model checkpoint exists: {checkpoint_path} ({size_mb:.1f} MB)")
+    elif checkpoint_path:
+        lines.append(f"FAIL: Model checkpoint path does not exist: {checkpoint_path}")
+    elif config.checkpoint_url.strip():
+        lines.append("OK: Model checkpoint is blank, but Model download URL is filled.")
+    else:
+        lines.append("FAIL: No model checkpoint and no Model download URL.")
+
+    if config.checkpoint_url.strip():
+        lines.append(f"Model download URL: {config.checkpoint_url.strip()}")
+
+    try:
+        port_ok, port_message = check_port_available(config.host.strip() or "127.0.0.1", int(config.port))
+        lines.append(("OK: " if port_ok else "FAIL: ") + port_message)
+    except Exception as exc:
+        lines.append(f"FAIL: Could not check port: {exc}")
+
+    try:
+        import torch
+
+        lines.append(f"OK: torch imports. Version: {torch.__version__}")
+        cuda_available = torch.cuda.is_available()
+        lines.append(f"CUDA available: {cuda_available}")
+        if cuda_available:
+            try:
+                lines.append(f"CUDA device count: {torch.cuda.device_count()}")
+                lines.append(f"CUDA device 0: {torch.cuda.get_device_name(0)}")
+            except Exception as exc:
+                lines.append(f"WARN: CUDA is available, but device name check failed: {exc}")
+        elif config.device_name.strip().lower() == "cuda":
+            lines.append("FAIL: Device is set to cuda, but torch.cuda.is_available() is False on this computer.")
+    except Exception as exc:
+        lines.append("FAIL: torch import failed.")
+        lines.append(friendly_error_message(exc))
+        lines.append(traceback.format_exc())
+
+    try:
+        import webknossos as wk
+
+        lines.append(f"OK: webknossos imports. Version: {getattr(wk, '__version__', 'unknown')}")
+    except Exception as exc:
+        lines.append("FAIL: webknossos import failed.")
+        lines.append(friendly_error_message(exc))
+        lines.append(traceback.format_exc())
+
+    lines.append("Diagnostics complete.")
+    return lines
 
 
 class BridgeApp:
@@ -261,7 +394,8 @@ class BridgeApp:
         self.stop_button = ttk.Button(controls, text="Stop", command=self._stop_bridge, state="disabled")
         self.stop_button.grid(row=0, column=1, padx=(0, 8))
         ttk.Button(controls, text="Download model", command=self._download_model_now).grid(row=0, column=2, padx=(0, 8))
-        ttk.Button(controls, text="Save settings", command=self._save_settings).grid(row=0, column=3, padx=(0, 8))
+        ttk.Button(controls, text="Diagnostics", command=self._run_diagnostics).grid(row=0, column=3, padx=(0, 8))
+        ttk.Button(controls, text="Save settings", command=self._save_settings).grid(row=0, column=4, padx=(0, 8))
         row += 1
 
         note = (
@@ -478,7 +612,7 @@ class BridgeApp:
                 bridge_config = config.to_bridge_config(checkpoint)
                 self.runtime.start(bridge_config, self._queue_event)
             except Exception as exc:
-                self._queue_event("error", {"message": str(exc), "traceback": traceback.format_exc()})
+                self._queue_event("error", {"message": friendly_error_message(exc), "traceback": traceback.format_exc()})
 
         threading.Thread(target=worker, name="PointnClickBridgeStartup", daemon=True).start()
 
@@ -504,9 +638,24 @@ class BridgeApp:
                 self._queue_event("status", {"message": "Model ready"})
                 self._queue_event("log", {"message": f"Model ready: {checkpoint}"})
             except Exception as exc:
-                self._queue_event("error", {"message": str(exc), "traceback": traceback.format_exc()})
+                self._queue_event("error", {"message": friendly_error_message(exc), "traceback": traceback.format_exc()})
 
         threading.Thread(target=worker, name="PointnClickModelDownload", daemon=True).start()
+
+    def _run_diagnostics(self) -> None:
+        try:
+            config = self._config_from_vars()
+        except Exception as exc:
+            self._log(f"Invalid settings: {exc}")
+            return
+        self.status_var.set("Running diagnostics")
+        self._log("Running diagnostics...")
+
+        def worker() -> None:
+            lines = build_diagnostics_report(config)
+            self._queue_event("diagnostics", {"lines": lines})
+
+        threading.Thread(target=worker, name="PointnClickDiagnostics", daemon=True).start()
 
     def _queue_event(self, event_type: str, payload: dict[str, Any]) -> None:
         self.events.put((event_type, payload))
@@ -538,6 +687,11 @@ class BridgeApp:
                     self.config.save()
                 except Exception as exc:
                     self._log(f"Downloaded model, but could not save settings: {exc}")
+        elif event_type == "diagnostics":
+            lines = [str(line) for line in payload.get("lines", [])]
+            for line in lines:
+                self._log(line)
+            self.status_var.set("Diagnostics complete")
         elif event_type == "ready":
             url = str(payload.get("url", ""))
             self.status_var.set(f"Running at {url}")
@@ -546,11 +700,18 @@ class BridgeApp:
             if layer_names:
                 self._log(f"Available layers: {', '.join(str(name) for name in layer_names)}")
         elif event_type == "error":
+            from tkinter import messagebox
+
             self.status_var.set("Error")
-            self._log(f"Error: {payload.get('message', '')}")
+            message = str(payload.get("message", ""))
+            self._log(f"Error: {message}")
             tb = payload.get("traceback")
             if tb:
                 self._log(str(tb))
+            messagebox.showerror(
+                "PointnClick Bridge failed",
+                f"{message}\n\nTroubleshooting log:\n{default_log_path()}",
+            )
             self.start_button.configure(state="normal")
             self.stop_button.configure(state="disabled")
         elif event_type == "stopped":
@@ -561,6 +722,7 @@ class BridgeApp:
             self.stop_button.configure(state="disabled")
 
     def _log(self, message: str) -> None:
+        append_log_file(message)
         self.log_text.configure(state="normal")
         self.log_text.insert("end", message.rstrip() + "\n")
         self.log_text.see("end")
@@ -572,6 +734,7 @@ class BridgeApp:
 
 
 def main() -> None:
+    install_windowed_stdio_redirect()
     BridgeApp().run()
 
 

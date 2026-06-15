@@ -1,0 +1,1 @@
+https://github.com/MilanP26/PointnClick-Segmentation/releases/download/v1.0.0/best_model.pt

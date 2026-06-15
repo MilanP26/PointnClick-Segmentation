@@ -113,6 +113,8 @@ In the release notes, include:
 7. Open WebKnossos, select a segment/color, place the crosshair, and press P.
 ```
 
+If the bridge app says failed on a user's computer, have them open the app's `Log` tab, click `Diagnostics`, and send `%LOCALAPPDATA%\PointnClick\bridge_app.log`. See [troubleshooting.md](troubleshooting.md).
+
 ## 6. What Users Should Leave Blank
 
 Users can leave these blank:

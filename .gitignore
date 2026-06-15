@@ -7,6 +7,11 @@ runs/
 vast_tmp/
 vast_package_extracted/
 src/*.egg-info/
+build/
+dist/
+PointnClickBridge.spec
+PointnClickBridge.zip
+pointnclick-webknossos-extension.zip
 
 .venv/Lib/site-packages/torch/lib/dnn.lib
 .venv/Lib/site-packages/torch/lib/torch_cpu.dll
