@@ -38,10 +38,11 @@ if ($LASTEXITCODE -ne 0) {
   throw "Runtime dependency install failed."
 }
 
-conda run -n $EnvName python -c "import torch, webknossos; print('torch', torch.__version__, 'cuda_available=', torch.cuda.is_available()); print('webknossos ok')"
+conda run -n $EnvName python -c "import torch, webknossos, cryptography; print('torch', torch.__version__, 'cuda_available=', torch.cuda.is_available()); print('webknossos ok'); print('cryptography ok')"
 if ($LASTEXITCODE -ne 0) {
   throw "Validation import failed."
 }
 
 Write-Host "PointnClick environment is ready."
 Write-Host "Run: .\scripts\run_pointnclick_bridge.ps1"
+Write-Host "For iPad/Tailscale mode, run: .\scripts\run_pointnclick_tailscale_server.ps1"

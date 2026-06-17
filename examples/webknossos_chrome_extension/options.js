@@ -3,6 +3,8 @@ const DEFAULT_CONFIG = {
   shortcutKey: "p",
   chunkSize: 5000,
   timeoutMs: 120000,
+  sessionToken: "",
+  username: "",
 };
 
 const fields = {
@@ -61,7 +63,7 @@ function testBridge() {
       return;
     }
     const data = response.data;
-    setStatus(`Connected.\nDataset: ${data.dataset}\nLayer: ${data.color_layer}\nDevice: ${data.device}\nCrop: ${data.crop_size}`);
+    setStatus(`Connected.\nMode: ${data.mode || "local bridge"}\nLayer: ${data.color_layer}\nDevice: ${data.device}\nCrop: ${data.crop_size}`);
   });
 }
 

@@ -105,6 +105,25 @@ def build_parser() -> argparse.ArgumentParser:
     webknossos_parser.add_argument("--output-dir", default="outputs\\webknossos_bridge")
     webknossos_parser.add_argument("--client-key", default="p", help="Keyboard shortcut used inside WebKnossos")
 
+    remote_webknossos_parser = subparsers.add_parser(
+        "webknossos-remote-server",
+        help="Run the multi-user WebKnossos PointnClick server for iPads and remote browsers",
+    )
+    remote_webknossos_parser.add_argument("--checkpoint", required=True)
+    remote_webknossos_parser.add_argument("--host", default="0.0.0.0")
+    remote_webknossos_parser.add_argument("--port", type=int, default=8765)
+    remote_webknossos_parser.add_argument("--webknossos-url", default="https://webknossos.org")
+    remote_webknossos_parser.add_argument("--color-layer", default="color", help="Default raw EM/image layer name")
+    remote_webknossos_parser.add_argument("--mag", default="1", help="Magnification to read, usually 1")
+    remote_webknossos_parser.add_argument("--crop-size", type=int, default=512)
+    remote_webknossos_parser.add_argument("--threshold", type=float, default=0.5)
+    remote_webknossos_parser.add_argument("--image-size", type=int)
+    remote_webknossos_parser.add_argument("--device", default="cuda")
+    remote_webknossos_parser.add_argument("--timeout", type=int, default=120, help="WebKnossos network timeout in seconds")
+    remote_webknossos_parser.add_argument("--output-dir")
+    remote_webknossos_parser.add_argument("--database-path")
+    remote_webknossos_parser.add_argument("--secret-key-path")
+
     subparsers.add_parser(
         "webknossos-app",
         help="Open the desktop app for the local WebKnossos bridge",
@@ -342,6 +361,34 @@ def main() -> None:
             client_key=args.client_key,
         )
         run_webknossos_bridge(config)
+        return
+
+    if args.command == "webknossos-remote-server":
+        from pointnclick_segmentation.remote_webknossos_server import (
+            RemoteWebKnossosServerConfig,
+            run_remote_webknossos_server,
+        )
+
+        config_kwargs = {
+            "checkpoint_path": args.checkpoint,
+            "host": args.host,
+            "port": args.port,
+            "webknossos_url": args.webknossos_url,
+            "color_layer": args.color_layer,
+            "mag": args.mag,
+            "crop_size": args.crop_size,
+            "threshold": args.threshold,
+            "image_size": args.image_size,
+            "device_name": args.device,
+            "timeout_s": args.timeout,
+        }
+        if args.output_dir:
+            config_kwargs["output_dir"] = args.output_dir
+        if args.database_path:
+            config_kwargs["database_path"] = args.database_path
+        if args.secret_key_path:
+            config_kwargs["secret_key_path"] = args.secret_key_path
+        run_remote_webknossos_server(RemoteWebKnossosServerConfig(**config_kwargs))
         return
 
     if args.command == "webknossos-app":

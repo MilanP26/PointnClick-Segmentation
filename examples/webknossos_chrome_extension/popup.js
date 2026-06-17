@@ -3,12 +3,18 @@ const DEFAULT_CONFIG = {
   shortcutKey: "p",
   chunkSize: 5000,
   timeoutMs: 120000,
+  sessionToken: "",
+  username: "",
 };
 
 const bridgeUrlInput = document.getElementById("bridge-url");
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
 const shortcutInput = document.getElementById("shortcut-key");
 const statusEl = document.getElementById("status");
 const saveButton = document.getElementById("save");
+const loginButton = document.getElementById("login");
+const logoutButton = document.getElementById("logout");
 const testButton = document.getElementById("test");
 const pageStatusButton = document.getElementById("page-status");
 const runButton = document.getElementById("run");
@@ -25,17 +31,63 @@ function setStatus(message) {
 function loadSettings() {
   chrome.storage.local.get(DEFAULT_CONFIG, (stored) => {
     bridgeUrlInput.value = normalizeBridgeUrl(stored.bridgeUrl);
+    usernameInput.value = String(stored.username || "");
     shortcutInput.value = String(stored.shortcutKey || DEFAULT_CONFIG.shortcutKey).slice(0, 1).toLowerCase();
-    setStatus("Ready. Start the local bridge app before segmenting.");
+    const signedIn = stored.sessionToken ? `Signed in as ${stored.username || "saved user"}.` : "Not signed in for remote server mode.";
+    setStatus(`${signedIn}\nRefresh WebKnossos after changing settings.`);
   });
 }
 
 function saveSettings() {
   const bridgeUrl = normalizeBridgeUrl(bridgeUrlInput.value);
   const shortcutKey = String(shortcutInput.value || DEFAULT_CONFIG.shortcutKey).slice(0, 1).toLowerCase();
-  chrome.storage.local.set({bridgeUrl, shortcutKey}, () => {
-    setStatus("Saved. Refresh WebKnossos or run window.pointnclickWebknossos.refreshConfig().");
+  return new Promise((resolve) => {
+    chrome.storage.local.set({bridgeUrl, shortcutKey}, () => {
+      setStatus("Saved. Refresh WebKnossos or run window.pointnclickWebknossos.refreshConfig().");
+      resolve();
+    });
   });
+}
+
+function sendRuntimeMessage(message) {
+  return new Promise((resolve) => {
+    chrome.runtime.sendMessage(message, (response) => {
+      const runtimeError = chrome.runtime.lastError;
+      if (runtimeError) {
+        resolve({ok: false, status: 0, data: {message: runtimeError.message}});
+        return;
+      }
+      resolve(response || {ok: false, status: 0, data: {message: "No response."}});
+    });
+  });
+}
+
+async function login() {
+  await saveSettings();
+  setStatus("Signing in...");
+  const response = await sendRuntimeMessage({
+    type: "POINTNCLICK_LOGIN",
+    payload: {
+      username: usernameInput.value.trim(),
+      password: passwordInput.value,
+    },
+  });
+  if (!response.ok) {
+    const message = response.data && response.data.message ? response.data.message : "Sign in failed.";
+    setStatus(`Sign in failed:\n${message}`);
+    return;
+  }
+  passwordInput.value = "";
+  setStatus(`Signed in as ${response.data.username}.\nToken saved: ${response.data.has_webknossos_token ? "yes" : "no"}`);
+}
+
+async function logout() {
+  const response = await sendRuntimeMessage({type: "POINTNCLICK_LOGOUT"});
+  if (!response.ok) {
+    setStatus("Sign out failed.");
+    return;
+  }
+  setStatus("Signed out.");
 }
 
 function testBridge() {
@@ -54,7 +106,7 @@ function testBridge() {
       return;
     }
     const data = response.data;
-    setStatus(`Connected.\nDataset: ${data.dataset}\nLayer: ${data.color_layer}\nDevice: ${data.device}`);
+    setStatus(`Connected.\nMode: ${data.mode || "local bridge"}\nLayer: ${data.color_layer}\nDevice: ${data.device}`);
   });
 }
 
@@ -100,6 +152,8 @@ async function runOnCurrentTab() {
 }
 
 saveButton.addEventListener("click", saveSettings);
+loginButton.addEventListener("click", login);
+logoutButton.addEventListener("click", logout);
 testButton.addEventListener("click", testBridge);
 pageStatusButton.addEventListener("click", checkPageStatus);
 runButton.addEventListener("click", runOnCurrentTab);

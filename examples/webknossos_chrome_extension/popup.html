@@ -16,12 +16,27 @@
       </div>
 
       <div class="row">
+        <label for="username">Username</label>
+        <input id="username" autocomplete="username" spellcheck="false">
+      </div>
+
+      <div class="row">
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password">
+      </div>
+
+      <div class="row">
         <label for="shortcut-key">Shortcut key</label>
         <input id="shortcut-key" maxlength="1" autocomplete="off" spellcheck="false">
       </div>
 
       <div class="actions">
         <button id="save">Save</button>
+        <button id="login" class="secondary">Sign in</button>
+        <button id="logout" class="secondary">Sign out</button>
+      </div>
+
+      <div class="actions">
         <button id="test" class="secondary">Test</button>
         <button id="page-status" class="secondary">Page</button>
         <button id="run" class="secondary">Run</button>
@@ -29,7 +44,7 @@
       </div>
 
       <div id="status" class="status">Loading settings...</div>
-      <p class="hint">Select a WebKnossos segment/color, put the crosshair on the target, then press the shortcut.</p>
+      <p class="hint">On iPad, use the floating Auto Mask button inside WebKnossos.</p>
     </main>
     <script src="popup.js"></script>
   </body>
